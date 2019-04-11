@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<header class="my-2 border container">
+<header class="my-2 mx-0 border container rounded" style="background:#FCFBF7; width: 100%;">
     <div class="row d-flex">
         <h4 class="col-3 align-self-center">Bảng điều khiển</h4>
         <div class="col-9">
@@ -30,20 +30,150 @@ layout: default
         </div>
     </div>
 </header>
-<div class="row ">
-    <div class="col">
-        <div class="container border my-4">
-
+<div class="row" style="height:80%">
+    <!-- First column -->
+    <div class="col-lg" style="height:100%">
+        <div class="container border my-4 rounded" style="background:#FCFBF7; height: 100%;">
+            <div class="container px-0 my-4">
+                <div class="dropdown">
+                    <button class="text-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        style="background: none;border: none">
+                        <i class="fas fa-briefcase">&nbsp;</i>
+                        <span>Positions/ Pools</span>
+                        <!-- <i class="fas fa-caret-down"></i> -->
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Tất cả vị trí (Quản trị viên)</a>
+                        <a class="dropdown-item" href="#">Vị trí của tôi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container border py-2" onclick="toDevPage()" style="background: #ffffff;">
+                <div class="d-flex justify-content-between">
+                    <small>
+                        <i class="icon fa fa-circle draft text-success"></i>
+                        <span class="ng-binding">Lập trình viên</span>
+                    </small>
+                    <button class="btn btn-secondary btn-sm py-0 px-1" data-toggle=" tooltip" data-placement="bottom"
+                        title="Thay đổi vị trí" onclick=" newTask()">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+                <div>
+                    <small>
+                        <i class="fa fa-map-marker-alt text-secondary"></i>
+                        <span class="ng-binding"> Vietnam</span>
+                    </small>
+                </div>
+                <small>
+                    <i class="fas fa-hospital-symbol"></i>
+                    <i class="fas fa-plus-circle"></i>
+                </small>
+            </div>
         </div>
     </div>
-    <div class="col">
-        <div class="container border my-4">
-
+    <!-- Second column -->
+    <div class="col-lg" style="height:100%">
+        <div class="container border my-4 rounded" style="height:50%">
+            <div class="container px-0 my-4">
+                <div class="dropdown">
+                    <button class="text-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        style="background: none;border: none">
+                        <i class="fas fa-users">&nbsp;</i>
+                        <span>Ứng cử viên</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Ứng cử viên mới</a>
+                        <a class="dropdown-item" href="#">Ứng cử viên của tôi</a>
+                        <a class="dropdown-item" href="#">Ứng cử viên chưa xem</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container border py-2" onclick="toDevPage()" style="background: #ffffff;">
+                <div class="row">
+                    <div class="col-2">
+                        <i class="fas fa-hospital-symbol fa-2x text-success"></i>
+                    </div>
+                    <div class="col-10 container">
+                        <h5 class="my-0"><b>Hong</b></h5>
+                        <small>Worked @ undefined<br></small>
+                        <small>
+                            <i class="fa fa-briefcase"></i>
+                            Dev
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container border my-4 rounded" style="height:50%">
+            <div class="container px-0 my-4 px-2">
+                <i class="fas fa-check-square">&nbsp;&nbsp;</i>
+                <span>Công việc</span>
+            </div>
+            <div class="container border py-2 align-items-center" style="background: #ffffff;">
+                <div class="container">
+                    <i class="fas fa-check-square fa-2x text-secondary
+                        d-flex justify-content-center"></i><br>
+                </div>
+                <div class="container">
+                    <small class="text-secondary d-flex justify-content-center">
+                        <br>Bạn đã hoàn thành hết công việc.
+                    </small>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col">
-        <div class="container border my-4">
-
+    <!-- Third column -->
+    <div class="col-lg" style="height:100%">
+        <div class="container border my-4 rounded" style="height:40%">
+            <div class="container px-0 my-4 px-2">
+                <i class="far fa-calendar-alt">&nbsp;&nbsp;</i>
+                <span>Lịch của tôi</span>
+            </div>
+            <div class="container border py-2 align-items-center" style="background: #ffffff;">
+                <div class="container">
+                    <i class="far fa-calendar-alt fa-2x text-secondary
+                                d-flex justify-content-center"></i><br>
+                </div>
+                <div class="container">
+                    <small class="text-secondary d-flex justify-content-center">
+                        <br>Không có lịch hẹn.
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="container border my-4 rounded" style="height:60%">
+            <div class="container px-0 my-4">
+                <div class="dropdown">
+                    <button class="text-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        style="background: none;border: none">
+                        <i class="fas fa-envelope">&nbsp;</i>
+                        <span>Hộp thoại</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Tất cả tin nhắn</a>
+                        <a class="dropdown-item" href="#">Tin nhắn của tôi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container border py-2" onclick="toDevPage()" style="background: #ffffff;">
+                <div class="row">
+                    <div class="col-2">
+                        <i class="fas fa-hospital-symbol fa-2x text-success"></i>
+                    </div>
+                    <div class="col-10 container">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="my-0"><b>Hong</b></h5>
+                            <small>3d Ago</small>
+                        </div>
+                        <small>Worked @ undefined<br></small>
+                    </div>
+                </div>
+                <small>Xin chào</small>
+            </div>
         </div>
     </div>
 
