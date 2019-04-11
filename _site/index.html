@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Breezy HR Demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/hambuger.css">
+</head>
+
+<body style="min-height: 100vh">
+    <div class="row">
+        <div class="bg-dark" style="min-height: 100vh; width: 260px;">
+            <div class="container">
+    <div class="row flex-nowrap align-items-center">
+        <a class="hamburger" href="#" ng-click="toggleNavSidebar()">
+            <i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i>
+        </a>
+        <div class="container">
+            <h5 class="text-light" title="Cloudjet">Cloudjet</h5>
+            <h6 class="text-black-50">Hong Le Viet</h6>
+        </div>
+        <div class=" d-flex">
+            <i class="fas fa-bell mx-2"></i>
+            <i class="fas fa-cog mx-2"></i>
+        </div>
+    </div>
+
+    <div class="container">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <form class="form-inline">
+                    <input class="form-control" type="search" placeholder="Tìm kiếm ứng viên" aria-label="Search">
+                </form>
+            </li>
+            <li>
+                <a class="nav-link active pl-0" href="#">
+                    <i class="fas fa-home"></i>
+                    <span>Trang chủ</span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link active pl-0" href="#">
+                    <i class="fas fa-envelope"></i>
+                    <span>Hộp thoại</span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link active d-flex align-items-center pl-0" href="#">
+                    <i class="fas fa-check-square "></i>
+                    <span>Công việc</span>
+                    <button class="btn btn-primary btn-sm ml-auto d-flex" href="#" ng-click="newTask()"
+                        style="padding:3px">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link active pl-0" href="#">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>Lịch</span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link active pl-0" href="#">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Báo cáo</span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link active pl-0" href="#">
+                    <i class="fas fa-search"></i>
+                    <span>Tìm kiếm tài năng</span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link active d-flex align-items-center pl-0" href="#">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Positions/ Pools</span>
+                    <button class="btn btn-primary btn-sm ml-auto d-flex" href="#" ng-click="newTask()"
+                        style="padding:3px">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link active d-flex align-items-center pl-0" href="#">
+                    <i class="fas fa-users"></i>
+                    <span>Ứng cử viên</span>
+                    <button class="btn btn-primary btn-sm ml-auto d-flex" href="#" ng-click="newTask()"
+                        style="padding:3px">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+        </div>
+        <div class="col" style="min-height: 100vh; width: 100%">
+            <header class="my-2 border container">
+    <div class="row d-flex">
+        <h4 class="col-3 align-self-center">Bảng điều khiển</h4>
+        <h5 class="col-3 align-self-center">Số liệu vừa qua</h5>
+        <div class="col-6">
+            <ul class="list-inline d-flex align-items-center" style="width: 100%; height: 100%;">
+                <li class="list-inline-item d-flex" style="height: 100%">
+                    <h6 class="d-inline align-self-center ">1&nbsp;<p>Positions<br>Activated</p>
+                    </h6>
+                </li>
+                <li class="list-inline-item d-flex" style="height: 100%">
+                    <h6 class="align-self-center d-inline">1&nbsp;<p>New<br>Candidates</p>
+                    </h6>
+                </li>
+                <li class="list-inline-item d-flex" style="height: 100%">
+                    <h6 class="align-self-center d-inline">0&nbsp;<p>Candidates<br>Moved Forward</p>
+                    </h6>
+                </li>
+                <li class="list-inline-item d-flex" style="height: 100%">
+                    <h6 class="align-self-center d-inline">0&nbsp;<p>Candidates<br>Hired</p>
+                    </h6>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="row my-2" style="height:100%">
+    <div class="col">
+        <div class="container border">
+
+        </div>
+    </div>
+    <div class="col">
+        <div class="container border">
+
+        </div>
+    </div>
+    <div class="col">
+        <div class="container border">
+
+        </div>
+    </div>
+
+</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
