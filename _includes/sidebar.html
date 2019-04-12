@@ -1,15 +1,157 @@
+<style>
+    .form-control:focus {
+        background-color: #ffffff !important;
+    }
+
+    .form-control::placeholder {
+        color: #E7E2BF;
+        opacity: 1;
+    }
+</style>
+
 <div class="container">
     <div class="row flex-nowrap align-items-center">
-        <a class="hamburger" href="#" ng-click="toggleNavSidebar()">
-            <i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i>
-        </a>
+        <button class="hamburger hamburger--arrow is-active pr-0" type="button">
+            <span class="hamburger-box">
+                <i class="fas fa-angle-left fa-2x"></i>
+            </span>
+        </button>
         <div class="container">
-            <h5 class="text-light" title="Cloudjet">Cloudjet</h5>
-            <h6 class="text-black-50">Hong Le Viet</h6>
+            <h5 class="text-light my-0">Cloudjet</h5>
+            <small class="text-light">Hong Le Viet</small>
         </div>
         <div class=" d-flex">
-            <i class="fas fa-bell mx-2 text-secondary"></i>
-            <i class="fas fa-cog mx-2 text-secondary"></i>
+            <div class="dropdown">
+                <i class="fas fa-bell mx-2 text-secondary" id="dropdownNotification" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"></i>
+                <div class="dropdown-menu" aria-labelledby="dropdownNotification">
+                    <div class="container flex-nowrap">
+                        <ul class="nav nav-tabs">
+                            <li class="Active">
+                                <a class="nav-link" href="#">Active</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <i class="fas fa-cog mx-2 text-secondary" id="dropdownConfiguration" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"></i>
+                <div class="dropdown-menu" aria-labelledby="dropdownNotification" style="min-width: 250px">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <i class="fas fa-hospital-symbol fa-2x text-success"></i>
+                            </div>
+                            <div class="col-10 container">
+                                <h6 class="my-0"><b>Hong Le Viet</b></h6>
+                                <small>hong@cloudjetkpi.com<br></small>
+                            </div>
+                        </div>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0" href="#">
+                                    <i class="fas fa-user">&nbsp;&nbsp;</i>
+                                    <small>Thiết lập người dùng</small>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0" href="#">
+                                    <i class="fas fa-question-circle">&nbsp;&nbsp;</i>
+                                    <small>Trợ giúp & Tài liệu</small>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0" href="#">
+                                    <i class="fas fa-keyboard">&nbsp;&nbsp;</i>
+                                    <small>Các phím tắt</small>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0" href="#">
+                                    <i class="fas fa-sign-out-alt">&nbsp;&nbsp;</i>
+                                    <small>Đăng xuất</small>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <i class="fas fa-copyright fa-2x text-success"></i>
+                            </div>
+                            <div class="col-10 container">
+                                <h6 class="my-0"><b>Cloudjet</b></h6>
+                                <a href="https://cjs.breezy.hr/">
+                                    <small>https://cjs.breezy.hr/<br></small>
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0" href="#">
+                                    <i class="fas fa-building">&nbsp;&nbsp;</i>
+                                    <small>Công ty</small>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="btn-group dropright">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="dropdown-item px-0" href="#">
+                                            <i class="fas fa-cogs">&nbsp;&nbsp;</i>
+                                            <small>Recruiting Prefernece</small>
+                                        </a>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <ul class="nav flex-column">
+                                            <li class="nav-item">
+                                                <a class="dropdown-item px-0" href="#">
+                                                    <i class="fas fa-user">&nbsp;&nbsp;</i>
+                                                    <small>Thiết lập người dùng</small>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="dropdown-item px-0" href="#">
+                                                    <i class="fas fa-question-circle">&nbsp;&nbsp;</i>
+                                                    <small>Trợ giúp & Tài liệu</small>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="dropdown-item px-0" href="#">
+                                                    <i class="fas fa-keyboard">&nbsp;&nbsp;</i>
+                                                    <small>Các phím tắt</small>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="dropdown-item px-0" href="#">
+                                                    <i class="fas fa-sign-out-alt">&nbsp;&nbsp;</i>
+                                                    <small>Đăng xuất</small>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0" href="#">
+                                    <i class="fas fa-keyboard">&nbsp;&nbsp;</i>
+                                    <small>Các phím tắt</small>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0" href="#">
+                                    <i class="fas fa-sign-out-alt">&nbsp;&nbsp;</i>
+                                    <small>Đăng xuất</small>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 
@@ -17,7 +159,8 @@
         <ul class="nav flex-column">
             <li class="nav-item">
                 <form class="form-inline">
-                    <input class="form-control" type="search" placeholder="Tìm kiếm ứng viên" aria-label="Search">
+                    <input class="form-control" type="search" placeholder="Tìm kiếm ứng viên" aria-label="Search"
+                        style="background-color:#787867">
                 </form>
             </li>
             <li class="nav-item">
