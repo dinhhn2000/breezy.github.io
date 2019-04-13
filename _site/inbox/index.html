@@ -312,185 +312,222 @@
 </div>
         </div>
         <div class="col px-0 mx-0" style="min-height: 100%; width: 100%;">
-            <header class="my-2 ml-3 border container rounded" style="background:#FCFBF7; min-width: 95%;">
-    <div class="row d-flex">
-        <h4 class="col-3 align-self-center">Bảng điều khiển</h4>
-        <div class="col-9">
-            <ul class="list-inline d-flex align-items-center justify-content-end" style="width: 100%; height: 100%;">
-                <li class="list-inline-item d-flex mx-4" style="height: 100%">
-                    <h5 class="d-flex align-items-center">Số liệu vừa qua</h5>
-                </li>
-                <li class="list-inline-item d-flex mx-4" style="height: 100%">
-                    <h6 class="d-flex align-items-center">1&nbsp;<small>Vị trí<br>còn trống</small>
-                    </h6>
-                </li>
-                <li class="list-inline-item d-flex mx-4" style="height: 100%">
-                    <h6 class="d-flex align-items-center">1&nbsp;<small>Ứng<br>viên mới</small>
-                    </h6>
-                </li>
-                <li class="list-inline-item d-flex mx-4" style="height: 100%">
-                    <h6 class="d-flex align-items-center">0&nbsp;<small>Ứng viên<br>tiến tới</small>
-                    </h6>
-                </li>
-                <li class="list-inline-item d-flex mx-4" style="height: 100%">
-                    <h6 class="d-flex align-items-center">0&nbsp;<small>Ứng viên<br>đã thuê</small>
-                    </h6>
-                </li>
-            </ul>
-        </div>
-    </div>
+            <header class="py-3 my-0 mx-0 border container" style="background:#FCFBF7; min-width: 100%;">
+    <h3>Hộp thoại</h3>
 </header>
-<div class="row pr-5 ml-0" style="height:80%">
-    <!-- First column -->
-    <div class="col-lg" style="height:100%">
-        <div class="container border my-4 rounded" style="background:#FCFBF7; height: 100%;">
-            <div class="container px-0 my-4">
-                <div class="dropdown">
-                    <button class="text-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        style="background: none;border: none">
-                        <i class="fas fa-briefcase">&nbsp;</i>
-                        <span>Positions/ Pools</span>
-                        <!-- <i class="fas fa-caret-down"></i> -->
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Tất cả vị trí (Quản trị viên)</a>
-                        <a class="dropdown-item" href="#">Vị trí của tôi</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container border py-2" onclick="toDevPage()" style="background: #ffffff;">
-                <div class="d-flex justify-content-between">
-                    <small>
-                        <i class="icon fa fa-circle draft text-success"></i>
-                        <span class="ng-binding">Lập trình viên</span>
-                    </small>
-                    <button class="btn btn-secondary btn-sm py-0 px-1" data-toggle=" tooltip" data-placement="bottom"
-                        title="Thay đổi vị trí" onclick=" newTask()">
-                        <i class="fas fa-cog"></i>
-                    </button>
-                </div>
-                <div>
-                    <small>
-                        <i class="fa fa-map-marker-alt text-secondary"></i>
-                        <span class="ng-binding"> Vietnam</span>
-                    </small>
-                </div>
-                <small>
-                    <i class="fas fa-hospital-symbol text-success"></i>
-                    <i class="fas fa-plus-circle"></i>
-                </small>
-            </div>
-        </div>
-    </div>
-    <!-- Second column -->
-    <div class="col-lg" style="height:100%">
-        <div class="container border my-4 rounded" style="height:50%; background:#FCFBF7">
-            <div class="container px-0 my-4">
-                <div class="dropdown">
-                    <button class="text-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        style="background: none;border: none">
-                        <i class="fas fa-users">&nbsp;</i>
-                        <span>Ứng cử viên</span>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Ứng cử viên mới</a>
-                        <a class="dropdown-item" href="#">Ứng cử viên của tôi</a>
-                        <a class="dropdown-item" href="#">Ứng cử viên chưa xem</a>
-                    </div>
-                </div>
-            </div>
-            <a href="#" style="text-decoration: none">
-                <div class="container border py-2 text-secondary" onclick="toDevPage()" style="background: #ffffff;">
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
-                        </div>
-                        <div class="col-10 container">
-                            <h5 class="my-0"><b>Hong</b></h5>
-                            <small>Worked @ undefined<br></small>
-                            <small>
-                                <i class="fa fa-briefcase"></i>
-                                Dev
-                            </small>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="container border my-4 rounded" style="height:50%; background:#FCFBF7">
-            <div class="container px-0 my-4 px-2">
-                <i class="fas fa-check-square">&nbsp;&nbsp;</i>
-                <span>Công việc</span>
-            </div>
-            <div class="container border py-2 align-items-center" style="background: #ffffff;">
-                <div class="container">
-                    <i class="fas fa-check-square fa-2x text-secondary
-                        d-flex justify-content-center"></i><br>
-                </div>
-                <div class="container">
-                    <small class="text-secondary d-flex justify-content-center">
-                        <br>Bạn đã hoàn thành hết công việc.
-                    </small>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Third column -->
-    <div class="col-lg" style="height:100%">
-        <div class="container border my-4 rounded" style="height:40%;background:#FCFBF7">
-            <div class="container px-0 my-4 px-2">
-                <i class="far fa-calendar-alt">&nbsp;&nbsp;</i>
-                <span>Lịch của tôi</span>
-            </div>
-            <div class="container border py-2 align-items-center" style="background: #ffffff;">
-                <div class="container">
-                    <i class="far fa-calendar-alt fa-2x text-secondary
-                                d-flex justify-content-center"></i><br>
-                </div>
-                <div class="container">
-                    <small class="text-secondary d-flex justify-content-center">
-                        <br>Không có lịch hẹn.
-                    </small>
-                </div>
-            </div>
-        </div>
-        <div class="container border my-4 rounded" style="height:60%;background:#FCFBF7">
-            <div class="container px-0 my-4">
-                <div class="dropdown">
-                    <button class="text-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        style="background: none;border: none">
-                        <i class="fas fa-envelope">&nbsp;</i>
-                        <span>Hộp thoại</span>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Tất cả tin nhắn</a>
-                        <a class="dropdown-item" href="#">Tin nhắn của tôi</a>
-                    </div>
-                </div>
-            </div>
-            <a href="#" style="text-decoration: none">
-                <div class="container border py-2 text-secondary" onclick="toDevPage()" style="background: #ffffff;">
-                    <div class="row">
-                        <div class="col-2 d-flex align-items-center">
-                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
-                        </div>
-                        <div class="col-10 container">
-                            <div class="d-flex justify-content-between">
-                                <h5 class="my-0"><b>Hong</b></h5>
-                                <small>3d Ago</small>
+<header class="pt-3 my-0 mx-0 container" style="min-width: 100%;">
+    <select class="form-control py-0 my-0" id="inputGroupSelect01"
+        style="width: 200px; height:30px ;background: #E9ECEF">
+        <option value="All" selected>Tất cả cuộc hội thoại</option>
+        <option value="Own">Cuộc hội thoại của tôi</option>
+    </select>
+</header>
+<div class="container mx-0 pr-5" style="overflow: hidden;">
+    <div class="row" style="height:100%">
+        <!-- Left border -->
+        <div class="col-lg">
+            <div class="container border my-4 px-0 rounded"
+                style="background:#FCFBF7; height:100vh; overflow-y:auto; min-width: 300px; width: 300px">
+                <a href="#" style="text-decoration: none">
+                    <div class="container border py-2 text-secondary" onclick="toDevPage()"
+                        style="background: #ffffff;">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <i class="fas fa-hospital-symbol fa-2x text-success"></i>
                             </div>
-                            <small>Worked @ undefined<br></small>
+                            <div class="col-10 container">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="my-0"><b>Hong</b></h5>
+                                    <small>3d Ago</small>
+                                </div>
+                                <small>Làm việc @ không xác định<br></small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 d-flex justify-content-end pr-0 align-items-center">
+                                <i class="fas fa-hospital-symbol text-info"></i>
+                            </div>
+                            <div class="col-10 d-flex align-items-center">
+                                <p class="mb-0"
+                                    style="overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size: 10px">
+                                    Hi, You're confirmed for the f...
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <small>Xin chào</small>
+                </a>
+            </div>
+        </div>
+        <!-- Middle border -->
+        <div class="col-lg">
+            <div class="container border my-4 px-0 rounded"
+                style="background:#FCFBF7; height:100vh; overflow-y:auto; width: 100%;">
+                <div class=" container pt-2">
+                    <!-- Header -->
+                    <div class="btn-group d-flex justify-content-end">
+                        <button id="writeMessBtn" class="btn btn-sm btn-primary" onclick="composeEmailBtn()">Soạn tin
+                            nhắn</button>
+                        <button class="btn btn-sm btn-primary">
+                            SMS
+                        </button>
+                    </div>
+                    <h3>Các cuộc trò chuyện</h3>
+                    <div class="conatiner">
+                        <div class="row mx-0">
+                            <div class="col-3 d-flex justify-content-end">
+                                <small class="text-secondary"><strong>Vị trí</strong></small>
+                            </div>
+                            <div class="col-9">
+                                <i class="icon fa fa-circle text-success"></i>
+                                <small>Dev</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Compose email -->
+                    <div id="ComposeMessage" style="display:none">
+                        <div class="container">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-3 d-flex justify-content-end">
+                                    <small class="text-secondary"><strong>Đến:</strong>
+                                    </small>
+                                </div>
+                                <div class="col-9">
+                                    <small>hong@cloudjetkpi.com</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" onclick="addCC()" id="addCCBtn">+Bản sao</a>
+                            <a href="#" onclick="addBCC()" id="addBCCBtn">+Bản sao tạm</a>
+                        </div>
+                        <div class="container" id="mailSubject">
+                            <div class="row py-1">
+                                <div class="col-3 pl-0 d-flex justify-content-end align-items-center">
+                                    <small class="text-secondary"><strong>Chủ đề:</strong></small>
+                                </div>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" style="height: 30px; font-size: 13px"
+                                        value="Re: Cloudjet opportunity">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <textarea id="emailTexter" rows="3" class="rounded text-secondary"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="btn btn-secondary py-1 mr-2" style="height:fit-content; 
+                            background: #edeff0; border: none; position: relative; overflow: hidden;">
+                                <i class="fas fa-paperclip text-secondary"></i>
+                                <input id="tagFileEmail" type="file">
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary btn-sm" style="height: 100%" onclick="sendEmail()">
+                                    <i class="fas fa-envelope"></i>
+                                    <small>Gửi thư</small>
+                                </button>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary btn-sm dropdown-toggle" id="dropdownCalendar"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                        style="height: 100%">
+                                        <i class="fas fa-clock"></i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownCalendar">
+                                        <input type="date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </a>
+            </div>
+        </div>
+        <!-- Right border -->
+        <div class="col-lg">
+            <div class="container border my-4 px-2 py-2 rounded"
+                style="background:#FCFBF7; height: 100vh; overflow-y:scroll; min-width: 280px; width: 300px">
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="btn btn-sm btn-primary mx-0">
+                        <i class="fas fa-calendar-alt text-white"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-primary mx-0">
+                        <i class="fas fa-list text-white"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm mx-0" style="background: #edeff0">
+                        <i class="fas fa-comments text-secondary"></i>
+                    </button>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-sm dropdown-toggle mx-0"
+                            style="background: #edeff0; color: #68747e;" id="dropdownMessage" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-arrows-alt-h text-secondary"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMessage">
+                            <a class="dropdown-item" href="#">Đã đăng ký</a>
+                            <a class="dropdown-item" href="#">Nhận xét</a>
+                            <a class="dropdown-item" href="#">Phỏng vấn</a>
+                            <a class="dropdown-item" href="#">Đưa ra đề nghị</a>
+                            <a class="dropdown-item" href="#">Không đủ tiêu chuẩn</a>
+                            <a class="dropdown-item" href="#">Đã thuê</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-sm dropdown-toggle mx-0"
+                            style="background: #edeff0; color: #68747e;" id="dropdownMessage" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-plus text-secondary"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMessage">
+                            <a class="dropdown-item" href="#">Chưa được chỉ định</a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="style3">
+                <div class="conatiner" style="">
+                    <div class="text-center">
+                        <i class="fas fa-hospital-symbol fa-6x text-success"></i>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="mb-0">Hong</h4>
+                        <small>Làm việc @ không xác định</small><br>
+                        <a href="#"><small>Thông tin</small></a>
+                    </div>
+                    <div class="text-center">
+                        <a href="#">
+                            <i class="fas fa-plus"></i>
+                            <small>Thêm thẻ</small>
+                        </a>
+                    </div>
+                    <hr>
+                    <div>
+                        <h6>Thông tin liên lạc</h6>
+                        <div class="d-flex align-items-center">
+                            <small>Email: &nbsp;</small>
+                            <a href="hong@cloudjetkpi.com"><small>hong@cloudjetkpi.com</small></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <h6>Thông tin chung</h6>
+                        <small>Tình trạng: </small>
+                        <small class="text-secondary">Đã nộp đơn</small><br>
+                        <small>Đăng ký tới: </small>
+                        <small class="text-secondary">Hong Le Viet</small>
+                    </div>
+                    <hr>
+                    <div>
+                        <h6>Thông tin khác</h6>
+                        <div class="d-flex align-items-center">
+                            <small>Email: &nbsp;&nbsp;&nbsp;</small>
+                            <a href="https://www.linkedin.com/in/leviethong"
+                                style="overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size: 15px">
+                                <small>https://www.linkedin.com/in/leviethong</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
 </div>
         </div>
     </div>

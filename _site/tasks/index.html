@@ -312,186 +312,275 @@
 </div>
         </div>
         <div class="col px-0 mx-0" style="min-height: 100%; width: 100%;">
-            <header class="my-2 ml-3 border container rounded" style="background:#FCFBF7; min-width: 95%;">
-    <div class="row d-flex">
-        <h4 class="col-3 align-self-center">Bảng điều khiển</h4>
-        <div class="col-9">
-            <ul class="list-inline d-flex align-items-center justify-content-end" style="width: 100%; height: 100%;">
-                <li class="list-inline-item d-flex mx-4" style="height: 100%">
-                    <h5 class="d-flex align-items-center">Số liệu vừa qua</h5>
-                </li>
-                <li class="list-inline-item d-flex mx-4" style="height: 100%">
-                    <h6 class="d-flex align-items-center">1&nbsp;<small>Vị trí<br>còn trống</small>
-                    </h6>
-                </li>
-                <li class="list-inline-item d-flex mx-4" style="height: 100%">
-                    <h6 class="d-flex align-items-center">1&nbsp;<small>Ứng<br>viên mới</small>
-                    </h6>
-                </li>
-                <li class="list-inline-item d-flex mx-4" style="height: 100%">
-                    <h6 class="d-flex align-items-center">0&nbsp;<small>Ứng viên<br>tiến tới</small>
-                    </h6>
-                </li>
-                <li class="list-inline-item d-flex mx-4" style="height: 100%">
-                    <h6 class="d-flex align-items-center">0&nbsp;<small>Ứng viên<br>đã thuê</small>
-                    </h6>
-                </li>
-            </ul>
+            <header class="py-3 my-0 mx-0 border container" style="background:#FCFBF7; min-width: 100%;">
+    <h3>Công việc</h3>
+</header>
+<header class="my-3 mx-0 container" style="min-width: 100%;">
+    <div class="row px-3">
+        <select class="form-control mr-5" id="inputGroupSelect01"
+            style="width: 210px; height: 35px ;background: #E9ECEF; font-size: 13px; border: none">
+            <option value="All" selected>Công việc được giao cho tôi</option>
+            <option value="Own">Công việc tôi đã giao</option>
+        </select>
+        <div class="dropdown">
+            <a class="btn" id="dropdownConfiguration" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                style="background: #E9ECEF; height: 35px;">
+                <i class="fas fa-cog text-secondary"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownConfiguration" style="min-width: 250px">
+                <a href="#" class="dropdown-item" onclick="upcomingTask()">
+                    Công việc chưa hoàn thành
+                </a>
+                <a href="#" class="dropdown-item" onclick="completedTask()">
+                    Công việc đã hoàn thành
+                </a>
+                <a href="#" class="dropdown-item" onclick="allTask()">
+                    Tất cả các công việc
+                </a>
+            </div>
         </div>
+        <button class="btn btn-primary mx-2" href="#" style="height: 35px">
+            <i class="fa fa-plus"></i>
+        </button>
     </div>
 </header>
-<div class="row pr-5 ml-0" style="height:80%">
-    <!-- First column -->
-    <div class="col-lg" style="height:100%">
-        <div class="container border my-4 rounded" style="background:#FCFBF7; height: 100%;">
-            <div class="container px-0 my-4">
-                <div class="dropdown">
-                    <button class="text-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        style="background: none;border: none">
-                        <i class="fas fa-briefcase">&nbsp;</i>
-                        <span>Positions/ Pools</span>
-                        <!-- <i class="fas fa-caret-down"></i> -->
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Tất cả vị trí (Quản trị viên)</a>
-                        <a class="dropdown-item" href="#">Vị trí của tôi</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container border py-2" onclick="toDevPage()" style="background: #ffffff;">
-                <div class="d-flex justify-content-between">
-                    <small>
-                        <i class="icon fa fa-circle draft text-success"></i>
-                        <span class="ng-binding">Lập trình viên</span>
-                    </small>
-                    <button class="btn btn-secondary btn-sm py-0 px-1" data-toggle=" tooltip" data-placement="bottom"
-                        title="Thay đổi vị trí" onclick=" newTask()">
-                        <i class="fas fa-cog"></i>
-                    </button>
-                </div>
-                <div>
-                    <small>
-                        <i class="fa fa-map-marker-alt text-secondary"></i>
-                        <span class="ng-binding"> Vietnam</span>
-                    </small>
-                </div>
-                <small>
-                    <i class="fas fa-hospital-symbol text-success"></i>
-                    <i class="fas fa-plus-circle"></i>
-                </small>
-            </div>
-        </div>
-    </div>
-    <!-- Second column -->
-    <div class="col-lg" style="height:100%">
-        <div class="container border my-4 rounded" style="height:50%; background:#FCFBF7">
-            <div class="container px-0 my-4">
-                <div class="dropdown">
-                    <button class="text-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        style="background: none;border: none">
-                        <i class="fas fa-users">&nbsp;</i>
-                        <span>Ứng cử viên</span>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Ứng cử viên mới</a>
-                        <a class="dropdown-item" href="#">Ứng cử viên của tôi</a>
-                        <a class="dropdown-item" href="#">Ứng cử viên chưa xem</a>
-                    </div>
-                </div>
-            </div>
-            <a href="#" style="text-decoration: none">
-                <div class="container border py-2 text-secondary" onclick="toDevPage()" style="background: #ffffff;">
-                    <div class="row">
-                        <div class="col-2">
-                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
-                        </div>
-                        <div class="col-10 container">
-                            <h5 class="my-0"><b>Hong</b></h5>
-                            <small>Worked @ undefined<br></small>
-                            <small>
-                                <i class="fa fa-briefcase"></i>
-                                Dev
-                            </small>
+<!-- Task content -->
+<div class="container" style="height: 75%">
+    <div class="row" style="height: 100%">
+        <div class="col-4">
+            <div id="upcomingTask" style="background:#FCFBF7; height: 100%" class="container border rounded py-3 px-0"
+                style="overflow-y: auto; height: 100%">
+                <h5 class="px-3">Công việc sắp tới</h5>
+                <a href="#" onclick="showUpcomingTask1()">
+                    <div class="container py-3 text-secondary border-top" onclick="toDevPage()"
+                        style="background: #ffffff;">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <i id="upcomingTaskSymbol" class="far fa-check-circle fa-2x" style="opacity:0.5"></i>
+                            </div>
+                            <div class="col-10 container">
+                                <h6 class="my-0"><b>Gửi cv2</b></h6>
+                                <i class="fas fa-clock"></i>
+                                <small>Due Wednesday</small>
+                                <i class="fas fa-user"></i>
+                                <small>You</small>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="container border my-4 rounded" style="height:50%; background:#FCFBF7">
-            <div class="container px-0 my-4 px-2">
-                <i class="fas fa-check-square">&nbsp;&nbsp;</i>
-                <span>Công việc</span>
-            </div>
-            <div class="container border py-2 align-items-center" style="background: #ffffff;">
-                <div class="container">
-                    <i class="fas fa-check-square fa-2x text-secondary
-                        d-flex justify-content-center"></i><br>
-                </div>
-                <div class="container">
-                    <small class="text-secondary d-flex justify-content-center">
-                        <br>Bạn đã hoàn thành hết công việc.
-                    </small>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Third column -->
-    <div class="col-lg" style="height:100%">
-        <div class="container border my-4 rounded" style="height:40%;background:#FCFBF7">
-            <div class="container px-0 my-4 px-2">
-                <i class="far fa-calendar-alt">&nbsp;&nbsp;</i>
-                <span>Lịch của tôi</span>
-            </div>
-            <div class="container border py-2 align-items-center" style="background: #ffffff;">
-                <div class="container">
-                    <i class="far fa-calendar-alt fa-2x text-secondary
-                                d-flex justify-content-center"></i><br>
-                </div>
-                <div class="container">
-                    <small class="text-secondary d-flex justify-content-center">
-                        <br>Không có lịch hẹn.
-                    </small>
-                </div>
-            </div>
-        </div>
-        <div class="container border my-4 rounded" style="height:60%;background:#FCFBF7">
-            <div class="container px-0 my-4">
-                <div class="dropdown">
-                    <button class="text-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        style="background: none;border: none">
-                        <i class="fas fa-envelope">&nbsp;</i>
-                        <span>Hộp thoại</span>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Tất cả tin nhắn</a>
-                        <a class="dropdown-item" href="#">Tin nhắn của tôi</a>
-                    </div>
-                </div>
-            </div>
-            <a href="#" style="text-decoration: none">
-                <div class="container border py-2 text-secondary" onclick="toDevPage()" style="background: #ffffff;">
+                </a>
+                <div class="container py-3 text-secondary border-top border-bottom" onclick="toDevPage()"
+                    style="background: #ffffff;">
                     <div class="row">
                         <div class="col-2 d-flex align-items-center">
-                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
+                            <i id="upcomingTaskSymbol" class="far fa-check-circle fa-2x" style="opacity:0.5"></i>
                         </div>
                         <div class="col-10 container">
-                            <div class="d-flex justify-content-between">
-                                <h5 class="my-0"><b>Hong</b></h5>
-                                <small>3d Ago</small>
-                            </div>
-                            <small>Worked @ undefined<br></small>
+                            <h6 class="my-0"><b>gửi JD</b></h6>
+                            <i class="fas fa-clock"></i>
+                            <small>Due Thursday</small>
+                            <i class="fas fa-user"></i>
+                            <small>You</small>
                         </div>
                     </div>
-                    <small>Xin chào</small>
                 </div>
-            </a>
+            </div>
+            <div id="completedTask" class="container border rounded py-3 px-0"
+                style="overflow-y: auto; height: 100%; display: none">
+                <h5 class="px-3">Công việc đã hoàn thành</h5>
+                <div class="container py-3 text-secondary" onclick="toDevPage()" style="background: #ffffff;">
+                    <div class="row">
+                        <div class="col-2 d-flex align-items-center">
+                            <i id="completedTaskSymbol" class="far fa-check-circle fa-2x" style="opacity:0.5"></i>
+                        </div>
+                        <div class="col-10 container">
+                            <h6 class="my-0"><b>Scoredcard: Hong</b></h6>
+                            <i class="fas fa-clock"></i>
+                            <small>Due Wednesday</small>
+                            <i class="fas fa-user"></i>
+                            <small>You</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-8 pl-0 pr-5" style="background:#FCFBF7">
+            <!-- Upcoming task 1 -->
+            <div id="upcomingTask1" class="container border py-3 text-secondary rounded" style="height: 100%">
+                <!-- Header -->
+                <div class="row my-0 d-flex align-items-center">
+                    <div class="col-2 d-flex justify-content-center">
+                        <i id="upcomingTaskSymbol" class="far fa-check-circle fa-3x" style="opacity:0.5"></i>
+                    </div>
+                    <div class="col-9 container pl-0">
+                        <h5 class="my-0"><b>Gửi cv2</b></h5>
+                        <small><strong>Giao cho: </strong> Hong Le Viet</small>
+                        <i class="fas fa-clock ml-2"></i>
+                        <small><strong>Đến ngày: </strong>Thứ tư&nbsp;</small>
+                        <a class="mr-10" href="#">Xem người ứng cử</a>
+                    </div>
+                    <div class="col-1">
+                        <div class="dropleft">
+                            <button class="btn" style="background:#E9ECEF" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Chỉnh sửa</a>
+                                <a class="dropdown-item" href="#">Xóa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- Content -->
+                <div class="container">
+                    <h6>Công việc</h6>
+                    <div class="row">
+                        <div class="col-1 d-flex align-items-center">
+                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
+                        </div>
+                        <div class="col-10 container px-0">
+                            <h7 class="my-0"><b>Hong Le Viet </b><small>tạo công việc</small></h7>
+                            <br>
+                            <small>22h trước</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Upcoming task 2 -->
+            <div id="upcomingTask2" class="container border py-3 text-secondary rounded"
+                style="height: 100%; display: none">
+                <!-- Header -->
+                <div class="row my-0 d-flex align-items-center">
+                    <div class="col-2 d-flex justify-content-center">
+                        <i id="upcomingTaskSymbol" class="far fa-check-circle fa-3x" style="opacity:0.5"></i>
+                    </div>
+                    <div class="col-9 container pl-0">
+                        <h5 class="my-0"><b>gửi JD</b></h5>
+                        <small><strong>Giao cho: </strong> Hong Le Viet</small>
+                        <i class="fas fa-clock ml-2"></i>
+                        <small><strong>Đến ngày: </strong>Thứ năm&nbsp;</small>
+                    </div>
+                    <div class="col-1">
+                        <div class="dropleft">
+                            <button class="btn" style="background:#E9ECEF" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Chỉnh sửa</a>
+                                <a class="dropdown-item" href="#">Xóa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- Content -->
+                <div class="container">
+                    <h6>Công việc</h6>
+                    <div class="row">
+                        <div class="col-1 d-flex align-items-center">
+                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
+                        </div>
+                        <div class="col-10 container px-0">
+                            <h7 class="my-0"><b>Hong Le Viet </b><small>tạo công việc</small></h7>
+                            <br>
+                            <small>24h trước</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Completed task 1 -->
+            <div id="completedTask1" class="container border py-3 text-secondary rounded"
+                style="height: 100%; display: none">
+                <!-- Header -->
+                <div class="row my-0 d-flex align-items-center">
+                    <div class="col-2 d-flex justify-content-center">
+                        <i id="completedTaskSymbol" class="far fa-check-circle fa-3x" style="opacity:0.5"></i>
+                    </div>
+                    <div class="col-9 container pl-0">
+                        <h5 class="my-0"><b>Scorecard: Hong</b></h5>
+                        <small><strong>Giao cho: </strong> Hong Le Viet</small>
+                        <i class="fas fa-clock ml-2"></i>
+                        <small><strong>Đến ngày: </strong>Thứ năm&nbsp;</small>
+                        <a class="mr-10" href="#">Xem người ứng cử</a>
+                    </div>
+                    <div class="col-1">
+                        <div class="dropleft">
+                            <button class="btn" style="background:#E9ECEF" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Chỉnh sửa</a>
+                                <a class="dropdown-item" href="#">Xóa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- Content -->
+                <!-- Detail -->
+                <div class="container">
+                    <h6>Chi tiết</h6>
+                    <small>Nộp 1 bảng điểm cho Hong lên Dev</small>
+                </div>
+                <hr>
+                <!-- Activity -->
+                <div class="container">
+                    <h6>Công việc</h6>
+                    <div class="row">
+                        <div class="col-1 d-flex align-items-center">
+                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
+                        </div>
+                        <div class="col-10 container px-0">
+                            <h7 class="my-0"><b>Hong Le Viet </b><small>đánh dấu đã hoàn thành</small></h7>
+                            <br>
+                            <small>24h trước</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <h6>Công việc</h6>
+                    <div class="row">
+                        <div class="col-1 d-flex align-items-center">
+                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
+                        </div>
+                        <div class="col-10 container px-0">
+                            <h7 class="my-0"><b>Hong Le Viet </b><small>tạo công việc</small></h7>
+                            <br>
+                            <small>24h trước</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
 </div>
+<script>
+    function upcomingTask() {
+        let x = document.getElementById("upcomingTask");
+        let y = document.getElementById("completedTask");
+        x.style.display = "block";
+        x.style.height = "100%";
+        y.style.display = "none";
+    }
+    function completedTask() {
+        let x = document.getElementById("upcomingTask");
+        let y = document.getElementById("completedTask");
+        y.style.display = "block";
+        y.style.height = "100%";
+        x.style.display = "none";
+    }
+    function allTask() {
+        let x = document.getElementById("upcomingTask");
+        let y = document.getElementById("completedTask");
+        x.style.display = "block";
+        x.style.height = "50%";
+        y.style.height = "50%";
+        y.style.display = "block";
+    }
+</script>
         </div>
     </div>
 
