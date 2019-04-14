@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Breezy HR Demo</title>
+
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -22,22 +22,31 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/hambuger.css">
-    <link rel="stylesheet" href="/css/custom.css">
-    <script src="/javascript/script.js"></script>
+
+    <link rel="stylesheet" href="{{ '/css/origin.css' | relative_url }}">
+    <!-- <link rel="stylesheet" href="{{ '/css/breezy.dependencies.css' | relative_url }}"> -->
+    
+    <link rel="stylesheet" href="{{ '/css/hambuger.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/custom.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/override.css' | relative_url }}">
+
+    <script src="{{ '/javascript/script.js' | relative_url }}"></script>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
 
 </head>
 
-<body style="height: 100vh">
-    <div class="row" style="height: 100%">
-        <div class="bg-dark" style="min-height: 100%; width: 250px;">
+<body class='d-flex has-sidebar' style="padding-top: 0; height: 100vh; overflow: hidden;">
+    <div class="row">
+        <div class="sidebar-nav-container" style="width: 260px; overflow: visible">
+            <div class="blocker"></div>
             {% include sidebar.html %}
         </div>
-        <div class="col px-0 mx-0" style="min-height: 100%; width: 100%;">
+        <article class="ui-view-container" style="margin-left: 260px">
             {{ content }}
-        </div>
+        </article>
     </div>
+
+    <!-- {%- include sidebar_setting.html -%} -->
 </body>
 
 </html>

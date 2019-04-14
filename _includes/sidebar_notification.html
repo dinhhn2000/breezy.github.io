@@ -1,0 +1,33 @@
+<div class="sidebar-notifications dropdown-menu"
+    aria-labelledby="toggle-notification">
+    <ul class="notification-headers d-flex">
+        <li class="notification-header active"
+            ng-class="showNotificationType.mentions ? &quot;active&quot;: &quot;&quot;">
+            <div class="notification-header-section"
+                ng-click="toggleShowNotificationType('user'); notificationToggle('user')">
+                <h4>
+                    <i class="fa fa-at"></i>
+                    <span>Mentions</span>
+                </h4>
+            </div>
+        </li>
+        <li class="notification-header" ng-class="!showNotificationType.mentions ? &quot;active&quot;: &quot;&quot;">
+            <div class="notification-header-section"
+                ng-click="toggleShowNotificationType('candidate'); notificationToggle('candidate');">
+                <h4>
+                    <i class="fa fa-users"></i>
+                    <span>Candidates</span>
+                </h4>
+            </div>
+        </li>
+    </ul>
+    <div class="notifications-list-container ng-scope" ng-if="showNotificationType.mentions">
+        <ul>
+            
+        </ul>
+        <p class="status ng-scope" ng-if="shared.activeCompany.notifications.user.length == 0">
+            <i class="fa fa-at"></i>
+            <span>You don't have any mentions notifications yet.</span>
+        </p>
+    </div>
+</div>

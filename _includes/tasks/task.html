@@ -1,0 +1,26 @@
+<div>
+    <div class="activity task inactive">
+        <div class="activity-type" ng-show="!task.completed" ng-click="completeTask(task, $event)"
+            tooltip-placement="bottom" uib-tooltip="Mark Complete" data-container="body" tooltip-append-to-body="true">
+            <i class="ng-hide fa fa-check inactive"></i>
+            <i class="ng-hide fa fa-refresh fa-spin active"></i>
+        </div>
+        <div class="activity-info">
+            <h6 class="title"><b>{{include.title}}</b></h6>
+            <ul class="actions">
+                <li class="action">
+                    <span class="datetime">
+                        <i class="fas fa-clock"></i>
+                        <small>Due {{include.duedate}}</small>
+                    </span>
+                </li>
+                <li class="action">
+                    <span>
+                        <i class="fas fa-user"></i>
+                        <small>{{include.assigned}}</small>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

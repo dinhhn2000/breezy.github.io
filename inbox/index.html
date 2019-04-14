@@ -2,23 +2,22 @@
 layout: default
 permalink: /inbox/
 ---
-
-<header class="py-3 my-0 mx-0 border container" style="background:#FCFBF7; min-width: 100%;">
-    <h3>Hộp thoại</h3>
-</header>
-<header class="pt-3 my-0 mx-0 container" style="min-width: 100%;">
-    <select class="form-control py-0 my-0" id="inputGroupSelect01"
-        style="width: 200px; height:30px ;background: #E9ECEF">
-        <option value="All" selected>Tất cả cuộc hội thoại</option>
-        <option value="Own">Cuộc hội thoại của tôi</option>
-    </select>
-</header>
-<div class="container mx-0 pr-5" style="overflow: hidden;">
-    <div class="row" style="height:100%">
-        <!-- Left border -->
-        <div class="col-lg">
-            <div class="container border my-4 px-0 rounded"
-                style="background:#FCFBF7; height:100vh; overflow-y:auto; min-width: 300px; width: 300px">
+<div class="ui-view" style="height: 100%; overflow: hidden; font-size: 0.8em">
+    <header class="bzy-page-header">
+        <h1>Hộp thoại</h1>
+    </header>
+    <header class="p-3 my-0 mx-0">
+        <select class="form-control py-0 my-0" id="inputGroupSelect01"
+            style="width: 200px; height:30px ;background: #E9ECEF">
+            <option value="All" selected>Tất cả cuộc hội thoại</option>
+            <option value="Own">Cuộc hội thoại của tôi</option>
+        </select>
+    </header>
+    <div class="mx-0 p-3 flex-grow-1">
+        <div class="d-flex justify-content-around" style="height:100%;">
+            <!-- Left border -->
+            <div class="border px-0 rounded"
+                style="background:#FCFBF7; overflow-y:auto; width: 300px">
                 <a href="#" style="text-decoration: none">
                     <div class="container border py-2 text-secondary" onclick="toDevPage()"
                         style="background: #ffffff;">
@@ -48,32 +47,27 @@ permalink: /inbox/
                     </div>
                 </a>
             </div>
-        </div>
-        <!-- Middle border -->
-        <div class="col-lg">
-            <div class="container border my-4 px-0 rounded"
-                style="background:#FCFBF7; height:100vh; overflow-y:auto; width: 100%;">
-                <div class=" container pt-2">
+
+
+            <!-- Middle border -->
+            <div class="border mx-4 px-0 rounded flex-grow-1" style="background:#FCFBF7; overflow-y:auto;">
+                <div class="">
                     <!-- Header -->
-                    <div class="btn-group d-flex justify-content-end">
-                        <button id="writeMessBtn" class="btn btn-sm btn-primary" onclick="composeEmailBtn()">Soạn tin
-                            nhắn</button>
-                        <button class="btn btn-sm btn-primary">
-                            SMS
-                        </button>
-                    </div>
-                    <h3>Các cuộc trò chuyện</h3>
-                    <div class="conatiner">
-                        <div class="row mx-0">
-                            <div class="col-3 d-flex justify-content-end">
-                                <small class="text-secondary"><strong>Vị trí</strong></small>
-                            </div>
-                            <div class="col-9">
+                    <div class="d-flex justify-content-between align-items-center px-4 py-2">
+                        <div class="">
+                            <h4>Hội thoại với ứng viên</h4>
+                            <div>
+                                <strong>Vị trí</strong>
                                 <i class="icon fa fa-circle text-success"></i>
                                 <small>Dev</small>
                             </div>
                         </div>
+                        <div class="btn-group d-flex justify-content-end">
+                            <button id="writeMessBtn" class="btn btn-sm btn-primary" onclick="composeEmailBtn()">Soạn tin nhắn</button>
+                            <button class="btn btn-sm btn-primary">SMS</button>
+                        </div>
                     </div>
+                    
                     <!-- Compose email -->
                     <div id="ComposeMessage" style="display:none">
                         <div class="container">
@@ -107,7 +101,7 @@ permalink: /inbox/
                         </div>
                         <div class="d-flex justify-content-end">
                             <div class="btn btn-secondary py-1 mr-2" style="height:fit-content; 
-                            background: #edeff0; border: none; position: relative; overflow: hidden;">
+                                background: #edeff0; border: none; position: relative; overflow: hidden;">
                                 <i class="fas fa-paperclip text-secondary"></i>
                                 <input id="tagFileEmail" type="file">
                             </div>
@@ -131,11 +125,11 @@ permalink: /inbox/
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Right border -->
-        <div class="col-lg">
-            <div class="container border my-4 px-2 py-2 rounded"
-                style="background:#FCFBF7; height: 100vh; overflow-y:scroll; min-width: 280px; width: 300px">
+
+
+            <!-- Right border -->
+            <div class="border p-2 rounded d-none d-lg-block"
+                style="background:#FCFBF7; overflow-y:scroll; width: 300px;">
                 <div class="d-flex justify-content-between">
                     <button type="button" class="btn btn-sm btn-primary mx-0">
                         <i class="fas fa-calendar-alt text-white"></i>
@@ -219,4 +213,5 @@ permalink: /inbox/
             </div>
         </div>
     </div>
+
 </div>

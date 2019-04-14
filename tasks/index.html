@@ -3,80 +3,72 @@ layout: default
 permalink: /tasks/
 ---
 
-<header class="py-3 my-0 mx-0 border container" style="background:#FCFBF7; min-width: 100%;">
-    <h3>Công việc</h3>
-</header>
-<header class="my-3 mx-0 container" style="min-width: 100%;">
-    <div class="row px-3">
-        <select class="form-control mr-5" id="inputGroupSelect01"
-            style="width: 210px; height: 35px ;background: #E9ECEF; font-size: 13px; border: none">
-            <option value="All" selected>Công việc được giao cho tôi</option>
-            <option value="Own">Công việc tôi đã giao</option>
-        </select>
-        <div class="dropdown">
-            <a class="btn" id="dropdownConfiguration" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                style="background: #E9ECEF; height: 35px;">
-                <i class="fas fa-cog text-secondary"></i>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownConfiguration" style="min-width: 250px">
-                <a href="#" class="dropdown-item" onclick="upcomingTask()">
-                    Công việc chưa hoàn thành
-                </a>
-                <a href="#" class="dropdown-item" onclick="completedTask()">
-                    Công việc đã hoàn thành
-                </a>
-                <a href="#" class="dropdown-item" onclick="allTask()">
-                    Tất cả các công việc
+<div class="ui-view">
+    <header class="bzy-page-header">
+        <h1>Công việc</h1>
+    </header>
+    <header class="bzy-page-header-secondary clearfix">
+        <div class="task-filters">
+            <div class="task-filter-type btn-group">
+                <select class="form-control" id="inputGroupSelect01"
+                    style="width: 200px; height: 35px; background: #E9ECEF; font-size: 12px; border: none">
+                    <option value="All" selected>Công việc được giao cho tôi</option>
+                    <option value="Own">Công việc tôi đã giao</option>
+                </select>
+            </div>
+            <div class="tasks-settings">
+                <div class="btn-group dropdown" style="position: unset;">
+                    <button class="btn rounded" id="tasks-settings-dropdown" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" style="background: #E9ECEF; height: 35px;">
+                        <i class="fas fa-cog text-secondary"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="tasks-settings-dropdown">
+                        <li>
+                            <label class="check-item">
+                                <input type="radio" name="taskview_type" value="todo" id="">
+                                <span>Công việc chưa hoàn thành</span>
+                            </label>
+                        </li>
+
+                        <li>
+                            <label class="check-item">
+                                <input type="radio" name="taskview_type" value="done" id="">
+                                <span>Công việc đã hoàn thành</span>
+                            </label>
+                        </li>
+
+                        <li>
+                            <label class="check-item">
+                                <input type="radio" name="taskview_type" value="all" id="">
+                                <span>Tất cả các công việc</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <a class="btn btn-blue add-task" href="#" style="height: 35px">
+                    <i class="fa fa-plus"></i>
                 </a>
             </div>
         </div>
-        <button class="btn btn-primary mx-2" href="#" style="height: 35px">
-            <i class="fa fa-plus"></i>
-        </button>
-    </div>
-</header>
-<!-- Task content -->
-<div class="container" style="height: 75%">
-    <div class="row" style="height: 100%">
-        <div class="col-4">
-            <div id="upcomingTask" style="background:#FCFBF7; height: 100%" class="container border rounded py-3 px-0"
-                style="overflow-y: auto; height: 100%">
-                <h5 class="px-3">Công việc sắp tới</h5>
-                <a href="#" onclick="showUpcomingTask1()">
-                    <div class="container py-3 text-secondary border-top" onclick="toDevPage()"
-                        style="background: #ffffff;">
-                        <div class="row">
-                            <div class="col-2 d-flex align-items-center">
-                                <i id="upcomingTaskSymbol" class="far fa-check-circle fa-2x" style="opacity:0.5"></i>
-                            </div>
-                            <div class="col-10 container">
-                                <h6 class="my-0"><b>Gửi cv2</b></h6>
-                                <i class="fas fa-clock"></i>
-                                <small>Due Wednesday</small>
-                                <i class="fas fa-user"></i>
-                                <small>You</small>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <div class="container py-3 text-secondary border-top border-bottom" onclick="toDevPage()"
-                    style="background: #ffffff;">
-                    <div class="row">
-                        <div class="col-2 d-flex align-items-center">
-                            <i id="upcomingTaskSymbol" class="far fa-check-circle fa-2x" style="opacity:0.5"></i>
-                        </div>
-                        <div class="col-10 container">
-                            <h6 class="my-0"><b>gửi JD</b></h6>
-                            <i class="fas fa-clock"></i>
-                            <small>Due Thursday</small>
-                            <i class="fas fa-user"></i>
-                            <small>You</small>
-                        </div>
-                    </div>
-                </div>
+
+    </header>
+    <!-- Task content -->
+    <section class="bzy-content-wrapper tasks-stream" style="">
+        <div class="tasks-content">
+            <div class="task-section" id="upcomingTask" style="overflow-y: auto; height: 100%">
+                <h2 class='upcoming'>Công việc sắp tới</h2>
+
+                <ul class="activity-stream task-list">
+                    <li class="activity-container task-incoming selected">
+                        {%- include tasks/task.html title="Gửi CV2" duedate="Wednesday" assigned="You" -%}
+                    </li>
+                    <li class="activity-container task-incoming">
+                        {%- include tasks/task.html title="Gửi JD" duedate="Thursday" assigned="You" -%}
+                    </li>
+                </ul>
+
             </div>
-            <div id="completedTask" class="container border rounded py-3 px-0"
-                style="overflow-y: auto; height: 100%; display: none">
+            <div id="completedTask" class="" style="overflow-y: auto; height: 100%; display: none">
                 <h5 class="px-3">Công việc đã hoàn thành</h5>
                 <div class="container py-3 text-secondary" onclick="toDevPage()" style="background: #ffffff;">
                     <div class="row">
@@ -94,160 +86,81 @@ permalink: /tasks/
                 </div>
             </div>
         </div>
-        <div class="col-8 pl-0 pr-5" style="background:#FCFBF7">
+        <div class="bzy-content contained" style="background:#FCFBF7">
             <!-- Upcoming task 1 -->
-            <div id="upcomingTask1" class="container border py-3 text-secondary rounded" style="height: 100%">
-                <!-- Header -->
-                <div class="row my-0 d-flex align-items-center">
-                    <div class="col-2 d-flex justify-content-center">
-                        <i id="upcomingTaskSymbol" class="far fa-check-circle fa-3x" style="opacity:0.5"></i>
-                    </div>
-                    <div class="col-9 container pl-0">
-                        <h5 class="my-0"><b>Gửi cv2</b></h5>
-                        <small><strong>Giao cho: </strong> Hong Le Viet</small>
-                        <i class="fas fa-clock ml-2"></i>
-                        <small><strong>Đến ngày: </strong>Thứ tư&nbsp;</small>
-                        <a class="mr-10" href="#">Xem người ứng cử</a>
-                    </div>
-                    <div class="col-1">
-                        <div class="dropleft">
-                            <button class="btn" style="background:#E9ECEF" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                <i class="fas fa-ellipsis-v"></i>
+            <div class="task-selected ng-scope" ng-if="selectedTask">
+                <div class="activity-type" ng-show="!selectedTask.completed" ng-click="completeTask(selectedTask)"
+                    tooltip-placement="bottom" uib-tooltip="Mark Complete" data-container="body"
+                    tooltip-append-to-body="true"><i class="fa fa-check"></i><i
+                        class="ng-hide fa fa-refresh fa-spin active"></i></div>
+                <ul class="task-header-actions">
+                    <li class="action">
+                        <div class="btn-group dropdown" uib-dropdown="uib-dropdown">
+                            <button class="btn btn-sm" type="button"
+                                id="tasks-view-setting"
+                                data-toggle="dropdown"
+                                uib-dropdown-toggle="uib-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-ellipsis-v"></i>
                             </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Chỉnh sửa</a>
-                                <a class="dropdown-item" href="#">Xóa</a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="tasks-view-setting" >
+                                <li>
+                                    <a onclick="editTask(selectedTask);">Sửa</a>
+                                </li>
+                                <li ng-if="selectedTask.owner" class="ng-scope">
+                                    <a onclick="deleteTask(selectedTask);">Xóa</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="task-header">
+                    <h1><span class="title ng-binding">Gửi CV2</span></h1>
+                    <ul class="meta">
+                        <li>
+                            <div class="assignee"><strong>Giao cho: </strong><span class="ng-binding">Hong Le Viet</span></div>
+                        </li>
+                        <li>
+                            <div><i class="fa fa-clock"></i><strong> Hạn: </strong><span
+                                    class="ng-binding">Thứ Năm</span></div>
+                        </li><!-- ngIf: selectedTask.position_id && !selectedTask.candidate_id -->
+                        <!-- ngIf: selectedTask.candidate_id -->
+                    </ul>
+                </div><!-- ngIf: selectedTask.description -->
+                <div class="section activity-section-container">
+                    <h3>Hoạt động</h3>
+                    <ul class="activity-stream">
+                        <!-- ngRepeat: activity in metadata.stream -->
+                        <li class="activity-container ng-scope" ng-repeat="activity in metadata.stream"
+                            ng-class="activity.postPageload ? &quot;new&quot;: &quot;&quot;">
+                            <div ng-include="'/templates/v2/app/stream/stream.html'" class="ng-scope">
+                                <div ng-include="'/templates/v2/app/stream/_activity.task.created.html'"
+                                    ng-if="::activity.type == &quot;taskAdded&quot;" class="ng-scope">
+                                    <div class="activity taskAdded" id="5cb02034723b490706a4599f">
+                                        <div class="activity-object">
+                                            <avatar person="activity.object.acting_user" size="sm"
+                                                class="ng-isolate-scope sm avatar color4" initial="H"></avatar>
+                                            <div class="activity-info">
+                                                <div class="activity-header">
+                                                    <p class="author-name ng-binding">Hong Le Viet<span> đã tạo công việc</span></p>
+                                                </div>
+                                                <div class="activity-footer"><span class="timestamp ng-binding"
+                                                        time-ago="time-ago" from-time="2019-04-12T05:20:52.320Z"
+                                                        tooltip-placement="bottom" uib-tooltip="Apr 12th @ 12:20 pm"
+                                                        data-container="body">2 ngày trước</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- Content -->
-                <div class="container">
-                    <h6>Công việc</h6>
-                    <div class="row">
-                        <div class="col-1 d-flex align-items-center">
-                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
-                        </div>
-                        <div class="col-10 container px-0">
-                            <h7 class="my-0"><b>Hong Le Viet </b><small>tạo công việc</small></h7>
-                            <br>
-                            <small>22h trước</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Upcoming task 2 -->
-            <div id="upcomingTask2" class="container border py-3 text-secondary rounded"
-                style="height: 100%; display: none">
-                <!-- Header -->
-                <div class="row my-0 d-flex align-items-center">
-                    <div class="col-2 d-flex justify-content-center">
-                        <i id="upcomingTaskSymbol" class="far fa-check-circle fa-3x" style="opacity:0.5"></i>
-                    </div>
-                    <div class="col-9 container pl-0">
-                        <h5 class="my-0"><b>gửi JD</b></h5>
-                        <small><strong>Giao cho: </strong> Hong Le Viet</small>
-                        <i class="fas fa-clock ml-2"></i>
-                        <small><strong>Đến ngày: </strong>Thứ năm&nbsp;</small>
-                    </div>
-                    <div class="col-1">
-                        <div class="dropleft">
-                            <button class="btn" style="background:#E9ECEF" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Chỉnh sửa</a>
-                                <a class="dropdown-item" href="#">Xóa</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- Content -->
-                <div class="container">
-                    <h6>Công việc</h6>
-                    <div class="row">
-                        <div class="col-1 d-flex align-items-center">
-                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
-                        </div>
-                        <div class="col-10 container px-0">
-                            <h7 class="my-0"><b>Hong Le Viet </b><small>tạo công việc</small></h7>
-                            <br>
-                            <small>24h trước</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Completed task 1 -->
-            <div id="completedTask1" class="container border py-3 text-secondary rounded"
-                style="height: 100%; display: none">
-                <!-- Header -->
-                <div class="row my-0 d-flex align-items-center">
-                    <div class="col-2 d-flex justify-content-center">
-                        <i id="completedTaskSymbol" class="far fa-check-circle fa-3x" style="opacity:0.5"></i>
-                    </div>
-                    <div class="col-9 container pl-0">
-                        <h5 class="my-0"><b>Scorecard: Hong</b></h5>
-                        <small><strong>Giao cho: </strong> Hong Le Viet</small>
-                        <i class="fas fa-clock ml-2"></i>
-                        <small><strong>Đến ngày: </strong>Thứ năm&nbsp;</small>
-                        <a class="mr-10" href="#">Xem người ứng cử</a>
-                    </div>
-                    <div class="col-1">
-                        <div class="dropleft">
-                            <button class="btn" style="background:#E9ECEF" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                <i class="fas fa-ellipsis-v"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Chỉnh sửa</a>
-                                <a class="dropdown-item" href="#">Xóa</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <!-- Content -->
-                <!-- Detail -->
-                <div class="container">
-                    <h6>Chi tiết</h6>
-                    <small>Nộp 1 bảng điểm cho Hong lên Dev</small>
-                </div>
-                <hr>
-                <!-- Activity -->
-                <div class="container">
-                    <h6>Công việc</h6>
-                    <div class="row">
-                        <div class="col-1 d-flex align-items-center">
-                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
-                        </div>
-                        <div class="col-10 container px-0">
-                            <h7 class="my-0"><b>Hong Le Viet </b><small>đánh dấu đã hoàn thành</small></h7>
-                            <br>
-                            <small>24h trước</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <h6>Công việc</h6>
-                    <div class="row">
-                        <div class="col-1 d-flex align-items-center">
-                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
-                        </div>
-                        <div class="col-10 container px-0">
-                            <h7 class="my-0"><b>Hong Le Viet </b><small>tạo công việc</small></h7>
-                            <br>
-                            <small>24h trước</small>
-                        </div>
-                    </div>
+                        </li><!-- end ngRepeat: activity in metadata.stream -->
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
+
+
 <script>
     function upcomingTask() {
         let x = document.getElementById("upcomingTask");
