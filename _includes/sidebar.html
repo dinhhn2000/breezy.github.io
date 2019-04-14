@@ -1,41 +1,234 @@
-<div class="container">
+<div class="container" style="height:100%">
     <div class="row flex-nowrap align-items-center">
-        <a class="hamburger" href="#" ng-click="toggleNavSidebar()">
-            <i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i>
-        </a>
+        <button class="hamburger hamburger--arrow is-active pr-0" type="button">
+            <span class="hamburger-box">
+                <i class="fas fa-angle-left fa-2x"></i>
+            </span>
+        </button>
         <div class="container">
-            <h5 class="text-light" title="Cloudjet">Cloudjet</h5>
-            <h6 class="text-black-50">Hong Le Viet</h6>
+            <h5 class="text-light my-0">Cloudjet</h5>
+            <small class="text-light">Hong Le Viet</small>
         </div>
         <div class=" d-flex">
-            <i class="fas fa-bell mx-2 text-secondary"></i>
-            <i class="fas fa-cog mx-2 text-secondary"></i>
+            <div class="dropdown">
+                <a class="btn pl-0 py-0" href="#" id="dropdownNotification" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <i class="fas fa-bell text-secondary"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownNotification">
+                    <div class="container" style="min-width: 250px">
+                        <p>Bootstrap navigation tab test</p>
+
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#Home" data-toggle="tab">Home</a></li>
+                            <li><a href="#Product" data-toggle="tab">Product</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="Home" class="tab-pane fade in active">
+                                <h3>Home</h3>
+                                <p>Blind would equal while oh mr do style. Lain led and fact none. One preferred
+                                    sportsmen resolving the happiness continued. High at of in loud rich true. Oh
+                                    conveying do immediate acuteness in he. Equally welcome her set nothing has gravity
+                                    whether parties. Fertile suppose shyness mr up pointed in staying on respect. </p>
+                            </div>
+                            <div id="Product" class="tab-pane fade">
+                                <h3>Product</h3>
+                                <p>Advanced extended doubtful he he blessing together. Introduced far law gay considered
+                                    frequently entreaties difficulty. Eat him four are rich nor calm. By an packages
+                                    rejoiced exercise. To ought on am marry rooms doubt music. Mention entered an
+                                    through company as. Up arrived no painful between. It declared is prospect an
+                                    insisted pleasure. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="btn pl-0 py-0" href="#" id="dropdownConfiguration" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-cog text-secondary"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownConfiguration" style="min-width: 250px">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <img src="https://breezy-avatars.imgix.net/8b49f/20190325095513.jpg?w=200&h=200&crop=faces&fit=crop"
+                                    class="rounded-circle" alt="Cinque Terre" width="35px" height="35px">
+                            </div>
+                            <div class="col-10 container">
+                                <h6 class="my-0"><b>Hong Le Viet</b></h6>
+                                <small>hong@cloudjetkpi.com<br></small>
+                            </div>
+                        </div>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0 text-secondary" href="#">
+                                    <i class="fas fa-user">&nbsp;&nbsp;</i>
+                                    <small>Thiết lập người dùng</small>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0 text-secondary" href="#">
+                                    <i class="fas fa-question-circle">&nbsp;&nbsp;</i>
+                                    <small>Trợ giúp & Tài liệu</small>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0 text-secondary" href="#">
+                                    <i class="fas fa-keyboard">&nbsp;&nbsp;</i>
+                                    <small>Các phím tắt</small>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0 text-secondary" href="#">
+                                    <i class="fas fa-sign-out-alt">&nbsp;&nbsp;</i>
+                                    <small>Đăng xuất</small>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <i class="fas fa-copyright fa-2x text-success"></i>
+                            </div>
+                            <div class="col-10 container">
+                                <h6 class="my-0"><b>Cloudjet</b></h6>
+                                <a href="https://cjs.breezy.hr/">
+                                    <small>https://cjs.breezy.hr/<br></small>
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0 text-secondary" href="#">
+                                    <i class="fas fa-building">&nbsp;&nbsp;</i>
+                                    <small>Công ty</small>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropright">
+                                    <a class="dropdown-item dropdown-toggle px-0 text-secondary" href="#">
+                                        <i class="fas fa-cogs">&nbsp;&nbsp;</i>
+                                        <small> Tuyển dụng</small>
+                                    </a>
+                                    <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                        <li class="dropdown-item"><a tabindex="-1" href="#">Second level</a></li>
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item" href="#">Even More..</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="dropdown-item"><a href="#">3rd level</a></li>
+                                                <li class="dropdown-submenu"><a class="dropdown-item" href="#">another
+                                                        level</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li class="dropdown-item"><a href="#">4th level</a></li>
+                                                        <li class="dropdown-item"><a href="#">4th level</a></li>
+                                                        <li class="dropdown-item"><a href="#">4th level</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown-item"><a href="#">3rd level</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-item"><a href="#">Second level</a></li>
+                                        <li class="dropdown-item"><a href="#">Second level</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0 text-secondary" href="#">
+                                    <i class="fas fa-envelope">&nbsp;&nbsp;</i>
+                                    <small>Mời các thành viên</small>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0 text-secondary" href="#">
+                                    <i class="fas fa-credit-card">&nbsp;&nbsp;</i>
+                                    <small>Chi tiết hóa đơn</small>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0 text-secondary" href="#">
+                                    <i class="fas fa-list-alt">&nbsp;&nbsp;</i>
+                                    <small>Quản lí đăng ký</small>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="dropdown-divider"></div>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0 text-secondary" href="#">
+                                    <i class="fas fa-gift">&nbsp;&nbsp;</i>
+                                    <small>Yêu cầu tính năng</small>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item px-0 text-secondary" href="#">
+                                    <i class="fas fa-bullhorn">&nbsp;&nbsp;</i>
+                                    <small>Cập nhật sản phẩm</small>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropright">
+                                    <a class="dropdown-item dropdown-toggle px-0 text-secondary" href="#">
+                                        <i class="fas fa-heart">&nbsp;&nbsp;</i>
+                                        <small>Gửi lời mời</small>
+                                    </a>
+                                    <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                        <li class="dropdown-item"><a tabindex="-1" href="#">Second level</a></li>
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item" href="#">Even More..</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="dropdown-item"><a href="#">3rd level</a></li>
+                                                <li class="dropdown-submenu"><a class="dropdown-item" href="#">another
+                                                        level</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li class="dropdown-item"><a href="#">4th level</a></li>
+                                                        <li class="dropdown-item"><a href="#">4th level</a></li>
+                                                        <li class="dropdown-item"><a href="#">4th level</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown-item"><a href="#">3rd level</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-item"><a href="#">Second level</a></li>
+                                        <li class="dropdown-item"><a href="#">Second level</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item px-0 text-secondary" href="#">
+                                <i class="fas fa-plus">&nbsp;&nbsp;</i>
+                                <small>Thêm công ty</small>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="container">
         <ul class="nav flex-column">
-            <li class="nav-item">
+            <li class="nav-item my-3">
                 <form class="form-inline">
-                    <input class="form-control" type="search" placeholder="Tìm kiếm ứng viên" aria-label="Search">
+                    <input class="form-control" type="text" placeholder="Tìm kiếm ứng viên" aria-label="Search"
+                        style="background-color:#767676; font-size: 13px; border: none; width: 100%; height: 90%;">
                 </form>
             </li>
             <li class="nav-item">
-                <a class="nav-link pl-0 text-secondary" href="#">
+                <a class="nav-link pl-0 text-secondary" href="/">
                     <i class="fas fa-home">&nbsp;</i>
-                    <span>Trang chủ</span>
+                    <h7>Trang chủ</h7>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link pl-0 text-secondary" href="#">
+                <a class="nav-link pl-0 text-secondary" href="/inbox">
                     <i class="fas fa-envelope">&nbsp;</i>
-                    <span>Hộp thoại</span>
+                    <h7>Hộp thoại</h7>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center pl-0 text-secondary" href="#">
+                <a class="nav-link d-flex align-items-center pl-0 text-secondary" href="/tasks">
                     <i class="fas fa-check-square">&nbsp;&nbsp;</i>
-                    <span>Công việc</span>
+                    <h7>Công việc</h7>
                     <button class="btn btn-primary btn-sm ml-auto d-flex" href="#" ng-click="newTask()"
                         style="padding:3px">
                         <i class="fa fa-plus"></i>
@@ -45,25 +238,25 @@
             <li class="nav-item">
                 <a class="nav-link pl-0 text-secondary" href="#">
                     <i class="far fa-calendar-alt">&nbsp;&nbsp;</i>
-                    <span>Lịch</span>
+                    <h7>Lịch</h7>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link pl-0 text-secondary" href="#">
                     <i class="fas fa-chart-bar">&nbsp;</i>
-                    <span>Báo cáo</span>
+                    <h7>Báo cáo</h7>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link pl-0 text-secondary" href="#">
                     <i class="fas fa-search">&nbsp;</i>
-                    <span>Tìm kiếm tài năng</span>
+                    <h7>Tìm kiếm tài năng</h7>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link d-flex align-items-center pl-0 text-secondary" href="#">
                     <i class="fas fa-briefcase">&nbsp;&nbsp;</i>
-                    <span>Positions/ Pools</span>
+                    <h7>Vị trí</h7>
                     <button class="btn btn-primary btn-sm ml-auto d-flex" href="#" ng-click="newTask()"
                         style="padding:3px">
                         <i class="fa fa-plus"></i>
@@ -73,7 +266,7 @@
             <li class="nav-item">
                 <a class="nav-link d-flex align-items-center pl-0 text-secondary" href="#">
                     <i class="fas fa-users">&nbsp;</i>
-                    <span>Ứng cử viên</span>
+                    <h7>Ứng cử viên</h7>
                     <button class="btn btn-primary btn-sm ml-auto d-flex" href="#" ng-click="newTask()"
                         style="padding:3px">
                         <i class="fa fa-plus"></i>

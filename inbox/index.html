@@ -1,0 +1,222 @@
+---
+layout: default
+permalink: /inbox/
+---
+
+<header class="py-3 my-0 mx-0 border container" style="background:#FCFBF7; min-width: 100%;">
+    <h3>Hộp thoại</h3>
+</header>
+<header class="pt-3 my-0 mx-0 container" style="min-width: 100%;">
+    <select class="form-control py-0 my-0" id="inputGroupSelect01"
+        style="width: 200px; height:30px ;background: #E9ECEF">
+        <option value="All" selected>Tất cả cuộc hội thoại</option>
+        <option value="Own">Cuộc hội thoại của tôi</option>
+    </select>
+</header>
+<div class="container mx-0 pr-5" style="overflow: hidden;">
+    <div class="row" style="height:100%">
+        <!-- Left border -->
+        <div class="col-lg">
+            <div class="container border my-4 px-0 rounded"
+                style="background:#FCFBF7; height:100vh; overflow-y:auto; min-width: 300px; width: 300px">
+                <a href="#" style="text-decoration: none">
+                    <div class="container border py-2 text-secondary" onclick="toDevPage()"
+                        style="background: #ffffff;">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <i class="fas fa-hospital-symbol fa-2x text-success"></i>
+                            </div>
+                            <div class="col-10 container">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="my-0"><b>Hong</b></h5>
+                                    <small>3d Ago</small>
+                                </div>
+                                <small>Làm việc @ không xác định<br></small>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 d-flex justify-content-end pr-0 align-items-center">
+                                <i class="fas fa-hospital-symbol text-info"></i>
+                            </div>
+                            <div class="col-10 d-flex align-items-center">
+                                <p class="mb-0"
+                                    style="overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size: 10px">
+                                    Hi, You're confirmed for the f...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Middle border -->
+        <div class="col-lg">
+            <div class="container border my-4 px-0 rounded"
+                style="background:#FCFBF7; height:100vh; overflow-y:auto; width: 100%;">
+                <div class=" container pt-2">
+                    <!-- Header -->
+                    <div class="btn-group d-flex justify-content-end">
+                        <button id="writeMessBtn" class="btn btn-sm btn-primary" onclick="composeEmailBtn()">Soạn tin
+                            nhắn</button>
+                        <button class="btn btn-sm btn-primary">
+                            SMS
+                        </button>
+                    </div>
+                    <h3>Các cuộc trò chuyện</h3>
+                    <div class="conatiner">
+                        <div class="row mx-0">
+                            <div class="col-3 d-flex justify-content-end">
+                                <small class="text-secondary"><strong>Vị trí</strong></small>
+                            </div>
+                            <div class="col-9">
+                                <i class="icon fa fa-circle text-success"></i>
+                                <small>Dev</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Compose email -->
+                    <div id="ComposeMessage" style="display:none">
+                        <div class="container">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-3 d-flex justify-content-end">
+                                    <small class="text-secondary"><strong>Đến:</strong>
+                                    </small>
+                                </div>
+                                <div class="col-9">
+                                    <small>hong@cloudjetkpi.com</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <a href="#" onclick="addCC()" id="addCCBtn">+Bản sao</a>
+                            <a href="#" onclick="addBCC()" id="addBCCBtn">+Bản sao tạm</a>
+                        </div>
+                        <div class="container" id="mailSubject">
+                            <div class="row py-1">
+                                <div class="col-3 pl-0 d-flex justify-content-end align-items-center">
+                                    <small class="text-secondary"><strong>Chủ đề:</strong></small>
+                                </div>
+                                <div class="col-9">
+                                    <input type="text" class="form-control" style="height: 30px; font-size: 13px"
+                                        value="Re: Cloudjet opportunity">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <textarea id="emailTexter" rows="3" class="rounded text-secondary"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <div class="btn btn-secondary py-1 mr-2" style="height:fit-content; 
+                            background: #edeff0; border: none; position: relative; overflow: hidden;">
+                                <i class="fas fa-paperclip text-secondary"></i>
+                                <input id="tagFileEmail" type="file">
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-primary btn-sm" style="height: 100%" onclick="sendEmail()">
+                                    <i class="fas fa-envelope"></i>
+                                    <small>Gửi thư</small>
+                                </button>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary btn-sm dropdown-toggle" id="dropdownCalendar"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                        style="height: 100%">
+                                        <i class="fas fa-clock"></i>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownCalendar">
+                                        <input type="date">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Right border -->
+        <div class="col-lg">
+            <div class="container border my-4 px-2 py-2 rounded"
+                style="background:#FCFBF7; height: 100vh; overflow-y:scroll; min-width: 280px; width: 300px">
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="btn btn-sm btn-primary mx-0">
+                        <i class="fas fa-calendar-alt text-white"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-primary mx-0">
+                        <i class="fas fa-list text-white"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm mx-0" style="background: #edeff0">
+                        <i class="fas fa-comments text-secondary"></i>
+                    </button>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-sm dropdown-toggle mx-0"
+                            style="background: #edeff0; color: #68747e;" id="dropdownMessage" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-arrows-alt-h text-secondary"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMessage">
+                            <a class="dropdown-item" href="#">Đã đăng ký</a>
+                            <a class="dropdown-item" href="#">Nhận xét</a>
+                            <a class="dropdown-item" href="#">Phỏng vấn</a>
+                            <a class="dropdown-item" href="#">Đưa ra đề nghị</a>
+                            <a class="dropdown-item" href="#">Không đủ tiêu chuẩn</a>
+                            <a class="dropdown-item" href="#">Đã thuê</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-sm dropdown-toggle mx-0"
+                            style="background: #edeff0; color: #68747e;" id="dropdownMessage" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-plus text-secondary"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMessage">
+                            <a class="dropdown-item" href="#">Chưa được chỉ định</a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="style3">
+                <div class="conatiner" style="">
+                    <div class="text-center">
+                        <i class="fas fa-hospital-symbol fa-6x text-success"></i>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="mb-0">Hong</h4>
+                        <small>Làm việc @ không xác định</small><br>
+                        <a href="#"><small>Thông tin</small></a>
+                    </div>
+                    <div class="text-center">
+                        <a href="#">
+                            <i class="fas fa-plus"></i>
+                            <small>Thêm thẻ</small>
+                        </a>
+                    </div>
+                    <hr>
+                    <div>
+                        <h6>Thông tin liên lạc</h6>
+                        <div class="d-flex align-items-center">
+                            <small>Email: &nbsp;</small>
+                            <a href="hong@cloudjetkpi.com"><small>hong@cloudjetkpi.com</small></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <h6>Thông tin chung</h6>
+                        <small>Tình trạng: </small>
+                        <small class="text-secondary">Đã nộp đơn</small><br>
+                        <small>Đăng ký tới: </small>
+                        <small class="text-secondary">Hong Le Viet</small>
+                    </div>
+                    <hr>
+                    <div>
+                        <h6>Thông tin khác</h6>
+                        <div class="d-flex align-items-center">
+                            <small>Email: &nbsp;&nbsp;&nbsp;</small>
+                            <a href="https://www.linkedin.com/in/leviethong"
+                                style="overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size: 15px">
+                                <small>https://www.linkedin.com/in/leviethong</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
