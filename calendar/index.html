@@ -1,0 +1,94 @@
+---
+layout: default
+permalink: /calendar/
+---
+
+<header class="py-3 my-0 mx-0 border container" style="background:#FCFBF7; min-width: 100%;">
+    <h3>Lịch</h3>
+</header>
+<div class="row">
+    <div class="col-3">
+        <div class="container py-3">
+            <h5>Các bộ lọc</h5>
+        </div>
+        <div class="container">
+            <select class="form-control py-0 my-2 border-0 fa text-secondary"
+                style="width: 200px; height:30px ;background: #E9ECEF">
+                <option>&#xf007;&nbsp;&nbsp;&nbsp;Tất cả sự kiện</option>
+                <option>&#xf007;&nbsp;&nbsp;&nbsp;Sự kiện của tôi</option>
+                <option>&#xf007;&nbsp;&nbsp;&nbsp;Không phải sự kiện của tôi</option>
+            </select>
+            <form>
+                <div class="multiselect">
+                    <div class="selectBox" onclick="showCheckboxes()">
+                        <select class="form-control py-0 my-2 border-0 fa text-secondary"
+                            style="width: 200px; height:30px ;background: #E9ECEF">
+                            <option>&#xf0b1;&nbsp;&nbsp;&nbsp;Vị trí</option>
+                        </select>
+                        <div class="overSelect"></div>
+                    </div>
+                    <div class="shadow px-3 pt-3 pb-0 mb-3 bg-white rounded" id="checkboxes">
+                        <label class="px-2 text-secondary" aria-disabled="true">Danh sách</label>
+                        <label class="px-2" for="one"><input type="checkbox" id="one" />Lập trình viên</label>
+                        <hr>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-9">
+        {% include calendar.html %}
+    </div>
+</div>
+
+<style>
+    .multiselect {
+        width: 200px;
+    }
+
+    .selectBox {
+        position: relative;
+    }
+
+    .selectBox select {
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .overSelect {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    #checkboxes {
+        display: none;
+        border: 1px #dadada solid;
+    }
+
+    #checkboxes label {
+        display: block;
+    }
+
+    #checkboxes label:hover {
+        background-color: #acacac;
+        border-radius: 3px
+    }
+</style>
+
+<script>
+    var expanded = false;
+
+    function showCheckboxes() {
+        var checkboxes = document.getElementById("checkboxes");
+        if (!expanded) {
+            checkboxes.style.display = "block";
+            expanded = true;
+        } else {
+            checkboxes.style.display = "none";
+            expanded = false;
+        }
+    }
+</script>

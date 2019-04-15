@@ -6,15 +6,14 @@ permalink: /inbox/
 <header class="py-3 my-0 mx-0 border container" style="background:#FCFBF7; min-width: 100%;">
     <h3>Hộp thoại</h3>
 </header>
-<header class="pt-3 my-0 mx-0 container" style="min-width: 100%;">
-    <select class="form-control py-0 my-0" id="inputGroupSelect01"
-        style="width: 200px; height:30px ;background: #E9ECEF">
+<header class="pt-3 my-0 container" style="min-width: 100%;">
+    <select class="form-control py-0 mx-2 border-0" style="width: 200px; height:30px ;background: #E9ECEF">
         <option value="All" selected>Tất cả cuộc hội thoại</option>
         <option value="Own">Cuộc hội thoại của tôi</option>
     </select>
 </header>
 <div class="container mx-0 pr-5" style="overflow: hidden;">
-    <div class="row" style="height:100%">
+    <div class="row" style="height:75%">
         <!-- Left border -->
         <div class="col-lg">
             <div class="container border my-4 px-0 rounded"
@@ -63,22 +62,23 @@ permalink: /inbox/
                         </button>
                     </div>
                     <h3>Các cuộc trò chuyện</h3>
-                    <div class="conatiner">
-                        <div class="row mx-0">
-                            <div class="col-3 d-flex justify-content-end">
-                                <small class="text-secondary"><strong>Vị trí</strong></small>
+                    <div class="container px-0">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-3 d-flex justify-content-start">
+                                <small class="text-secondary"><strong>Vị trí:</strong></small>
                             </div>
                             <div class="col-9">
-                                <i class="icon fa fa-circle text-success"></i>
-                                <small>Dev</small>
+                                <i class="icon fa fa-circle fa-sm text-info"></i>
+                                <small>Lập trình viên</small>
                             </div>
                         </div>
                     </div>
+
                     <!-- Compose email -->
                     <div id="ComposeMessage" style="display:none">
-                        <div class="container">
+                        <div class="container px-0">
                             <div class="row d-flex align-items-center">
-                                <div class="col-3 d-flex justify-content-end">
+                                <div class="col-3 d-flex justify-content-start">
                                     <small class="text-secondary"><strong>Đến:</strong>
                                     </small>
                                 </div>
@@ -91,9 +91,9 @@ permalink: /inbox/
                             <a href="#" onclick="addCC()" id="addCCBtn">+Bản sao</a>
                             <a href="#" onclick="addBCC()" id="addBCCBtn">+Bản sao tạm</a>
                         </div>
-                        <div class="container" id="mailSubject">
+                        <div class="container px-0" id="mailSubject">
                             <div class="row py-1">
-                                <div class="col-3 pl-0 d-flex justify-content-end align-items-center">
+                                <div class="col-3 pr-0 d-flex justify-content-start align-items-center">
                                     <small class="text-secondary"><strong>Chủ đề:</strong></small>
                                 </div>
                                 <div class="col-9">
@@ -102,7 +102,7 @@ permalink: /inbox/
                                 </div>
                             </div>
                         </div>
-                        <div class="container">
+                        <div class="container px-0">
                             <textarea id="emailTexter" rows="3" class="rounded text-secondary"></textarea>
                         </div>
                         <div class="d-flex justify-content-end">
@@ -111,6 +111,7 @@ permalink: /inbox/
                                 <i class="fas fa-paperclip text-secondary"></i>
                                 <input id="tagFileEmail" type="file">
                             </div>
+                            <!-- Send email buttons -->
                             <div class="btn-group">
                                 <button class="btn btn-primary btn-sm" style="height: 100%" onclick="sendEmail()">
                                     <i class="fas fa-envelope"></i>

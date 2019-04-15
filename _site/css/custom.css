@@ -1,91 +1,134 @@
-    .form-control:focus {
-        background-color: #ffffff !important;
-    }
+.form-control:focus {
+    background-color: #ffffff !important;
+}
 
-    .form-control::placeholder {
-        color: #dddddd;
-        opacity: 1;
-    }
+.form-control::placeholder {
+    color: #c0c0c0;  
+    opacity: 1;
+}
 
-    .dropdown-submenu {
-        position: relative;
-    }
+.dropdown-submenu {
+    position: relative;
+}
 
-    .dropdown-submenu>.dropdown-menu {
-        top: 0;
-        left: 100%;
-        margin-top: -6px;
-        margin-left: -1px;
-        -webkit-border-radius: 0 6px 6px 6px;
-        -moz-border-radius: 0 6px 6px;
-        border-radius: 0 6px 6px 6px;
-    }
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
 
-    .dropdown-submenu:hover>.dropdown-menu {
-        display: block;
-    }
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
 
-    .dropdown-submenu>a:after {
-        display: block;
-        content: " ";
-        float: right;
-        width: 0;
-        height: 0;
-        border-color: transparent;
-        border-style: solid;
-        border-width: 5px 0 5px 5px;
-        border-left-color: #ccc;
-        margin-top: 5px;
-        margin-right: -10px;
-    }
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
 
-    .dropdown-submenu:hover>a:after {
-        border-left-color: #fff;
-    }
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
 
-    .dropdown-submenu.pull-left {
-        float: none;
-    }
+.dropdown-submenu.pull-left {
+    float: none;
+}
 
-    .dropdown-submenu.pull-left>.dropdown-menu {
-        left: -100%;
-        margin-left: 10px;
-        -webkit-border-radius: 6px 0 6px 6px;
-        -moz-border-radius: 6px 0 6px 6px;
-        border-radius: 6px 0 6px 6px;
-    }
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
 
-    hr.style3 {
-        border-top: 1px dashed #8c8b8b;
-        opacity: 0.5;
-    }
+hr.style3 {
+    border-top: 1px dashed #8c8b8b;
+    opacity: 0.5;
+}
 
-    #emailTexter {
-        font-size: 14px;
-        resize: none;
-        overflow-y: hidden;
-        width: 100%;
-        padding: 10px;
-    }
+#emailTexter {
+    font-size: 14px;
+    resize: none;
+    overflow-y: hidden;
+    width: 100%;
+    padding: 10px;
+}
 
-    #tagFileEmail {
-        position: absolute;
-        font-size: 50px;
-        opacity: 0;
-        right: 0;
-        top: 0;
-    }
-    
-    #upcomingTaskSymbol:hover{
-        opacity: 1;
-        color: white;
-        background: #00e557;
-        border-radius: 50%;
-    }
+#tagFileEmail {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
 
-    #completedTaskSymbol{
-        opacity: 1;
-        color: white;
-        background: #00e557;
-        border-radius: 50%;
-    }
+#upcomingTaskSymbol:hover {
+    opacity: 1;
+    color: white;
+    background: #00e557;
+    border-radius: 50%;
+}
+
+#completedTaskSymbol {
+    opacity: 1;
+    color: white;
+    background: #00e557;
+    border-radius: 50%;
+}
+
+#sideBarMenu:hover {
+    color: #ffffff !important;
+}
+
+#upcomingTaskMenu1, #upcomingTaskMenu2, #completedTaskMenu1:hover {
+    text-decoration: none
+}
+
+html {
+    overflow: hidden;
+}
+
+#sidebarSearchBar::placeholder {
+    color: #ffffff
+}
+
+.hamburger {
+    width: 45px;
+    margin-left: 5px;
+    display: inline-block;
+    color: #777;
+    vertical-align: top;
+    padding-bottom: 0%
+}
+
+.hamburger i {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.hamburger i.fa-chevron-left {
+    display: block;
+}
+
+.hamburger i.fa-chevron-right {
+    display: none;
+}
+
+.hamburger:hover {
+    color: #ffffff;
+    text-decoration: none !important
+}

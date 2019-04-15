@@ -1,0 +1,12 @@
+html {
+    font-size: 14px;
+}
+
+.dropdown-menu, .sidebar-settings, .sidebar-notifications {
+    transform: none !important;
+}
+
+.dropdown:hover > .dropdown-menu.multi-level {
+    display: block;
+} 
+  

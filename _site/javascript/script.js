@@ -18,12 +18,12 @@ function composeEmailBtn() {
 }
 function addCC() {
     let subj = document.getElementById('mailSubject');
-    subj.innerHTML += '<div class="row py-1"><div class="col-3 d-flex justify-content-end align-items-center"><small class="text-secondary"><strong>CC:</strong></small></div><div class="col-9"><input type="text" class="form-control" style="height: 30px; font-size: 13px" placeholder="e.g. jane@domain.com, mark@domain.com"></div></div>'
+    subj.innerHTML += '<div class="row py-1"><div class="col-3 d-flex justify-content-start align-items-center"><small class="text-secondary"><strong>CC:</strong></small></div><div class="col-9"><input type="text" class="form-control" style="height: 30px; font-size: 13px" placeholder="e.g. jane@domain.com, mark@domain.com"></div></div>'
     document.getElementById('addCCBtn').hidden = true;
 }
 function addBCC() {
     let subj = document.getElementById('mailSubject');
-    subj.innerHTML += '<div class="row py-1"><div class="col-3 d-flex justify-content-end align-items-center"><small class="text-secondary"><strong>BCC:</strong></small></div><div class="col-9"><input type="text" class="form-control" style="height: 30px; font-size: 13px" placeholder="e.g. jane@domain.com, mark@domain.com"></div></div>'
+    subj.innerHTML += '<div class="row py-1"><div class="col-3 d-flex justify-content-start align-items-center"><small class="text-secondary"><strong>BCC:</strong></small></div><div class="col-9"><input type="text" class="form-control" style="height: 30px; font-size: 13px" placeholder="e.g. jane@domain.com, mark@domain.com"></div></div>'
     document.getElementById('addBCCBtn').hidden = true;
 }
 // Auto size text email in inbox
@@ -86,4 +86,4 @@ function sendEmail() {
 }
 
 
-// TASK PAGE
+// REPORT PAGE

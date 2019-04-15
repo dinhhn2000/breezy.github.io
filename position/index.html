@@ -1,0 +1,338 @@
+---
+layout: default
+permalink: /position/
+---
+
+<header class="py-3 my-0 mx-0 border container" style="background:#FCFBF7; min-width: 100%;">
+    <h3>Vị trí</h3>
+</header>
+<header class="my-3 mx-0 container" style="min-width: 100%;">
+    <div class="row px-3">
+        <div class="col d-flex justify-content-start px-0">
+            <a class="btn mr-3 text-secondary" id="dropdownConfiguration" style="background: #E9ECEF; height: 35px;">
+                <i class="fas fa-filter"></i>
+            </a>
+            <div class="dropdown mr-3">
+                <button id="dropdownBtn" class="btn btn-gray dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"
+                    style="height:35px; width: 200px; text-align: left; color: #545B62">
+                    <i class="fas fa-briefcase"></i>&nbsp;&nbsp;&nbsp;Mọi vị trí
+                </button>
+                <div class="dropdown-menu" aria-labelledby="triggerIdCompany">
+                    <button class="dropdown-item text-secondary" href="#">
+                        <i class="fas fa-briefcase"></i>&nbsp;&nbsp;&nbsp;Mọi vị trí
+                    </button>
+                    <button class="dropdown-item text-secondary" href="#">
+                        <i class="fas fa-briefcase"></i>&nbsp;&nbsp;&nbsp;Vị trí của tôi
+                    </button>
+                </div>
+            </div>
+            <div class="dropdown" style="font-size:10px">
+                <button id="dropdownBtn" class="btn btn-gray dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"
+                    style="height:35px; width: 150px; text-align: left; color: #545B62">
+                    <i class="fas fa-columns"></i>&nbsp;&nbsp;&nbsp;Mọi vị trí
+                </button>
+                <div class="dropdown-menu" aria-labelledby="triggerIdCompany">
+                    <button class="dropdown-item text-secondary" href="#">
+                        <i class="fas fa-columns"></i>&nbsp;&nbsp;&nbsp;Mọi vị trí
+                    </button>
+                    <button class="dropdown-item text-secondary" href="#">
+                        <i class="fas fa-columns"></i>&nbsp;&nbsp;&nbsp;Vị trí của tôi
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col d-flex justify-content-end px-0">
+            <div class="dropdown">
+                <a class="btn" id="dropdownConfiguration" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false" style="background: #E9ECEF; height: 35px;">
+                    <i class="fas fa-cog text-secondary"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownConfiguration" style="min-width: 250px">
+                    <a href="#" class="dropdown-item" onclick="upcomingTask()">
+                        Công việc chưa hoàn thành
+                    </a>
+                    <a href="#" class="dropdown-item" onclick="completedTask()">
+                        Công việc đã hoàn thành
+                    </a>
+                    <a href="#" class="dropdown-item" onclick="allTask()">
+                        Tất cả các công việc
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</header>
+<!-- Task content -->
+<div class="container" style="height: 75%">
+    <div class="row" style="height: 100%">
+        <!-- Left border -->
+        <div class="col-4">
+            <div id="upcomingTask" style="background:#FCFBF7; height: 100%" class="container border rounded py-3 px-0"
+                style="overflow-y: auto; height: 100%">
+                <h5 class="px-3">Công việc sắp tới</h5>
+                <a id="upcomingTaskMenu1" href="#" onclick="showUpcomingTask1()">
+                    <div class="container py-3 text-secondary border-top""
+                        style=" background: #ffffff;">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <i id="upcomingTaskSymbol" class="far fa-check-circle fa-2x" style="opacity:0.5"></i>
+                            </div>
+                            <div class="col-10 container">
+                                <h6 class="my-0"><b>Gửi cv2</b></h6>
+                                <i class="fas fa-clock"></i>
+                                <small>Due Wednesday</small>
+                                <i class="fas fa-user"></i>
+                                <small>You</small>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a id="upcomingTaskMenu2" href="#" onclick="showUpcomingTask2()">
+                    <div class="container py-3 text-secondary border-top border-bottom""
+                    style=" background: #ffffff;">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <i id="upcomingTaskSymbol" class="far fa-check-circle fa-2x" style="opacity:0.5"></i>
+                            </div>
+                            <div class="col-10 container">
+                                <h6 class="my-0"><b>gửi JD</b></h6>
+                                <i class="fas fa-clock"></i>
+                                <small>Due Thursday</small>
+                                <i class="fas fa-user"></i>
+                                <small>You</small>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div id="completedTask" class="container border rounded py-3 px-0"
+                style="background:#FCFBF7; overflow-y: auto; height: 100%; display: none">
+                <h5 class="px-3">Công việc đã hoàn thành</h5>
+                <a id="completedTaskMenu1" href="#" onclick="showcompletedTask1()">
+                    <div class="container py-3 text-secondary border-top border-bottom" style="background: #ffffff;">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <i id="completedTaskSymbol" class="far fa-check-circle fa-2x" style="opacity:0.5"></i>
+                            </div>
+                            <div class="col-10 container">
+                                <h6 class="my-0"><b>Scoredcard: Hong</b></h6>
+                                <i class="fas fa-clock"></i>
+                                <small>Due Wednesday</small>
+                                <i class="fas fa-user"></i>
+                                <small>You</small>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Right border -->
+        <div class="col-8 pl-0 pr-5" style="background:#FCFBF7">
+            <!-- Upcoming task 1 -->
+            <div id="upcomingTask1" class="container border py-3 text-secondary rounded" style="height: 100%">
+                <!-- Header -->
+                <div class="row my-0 d-flex align-items-center">
+                    <div class="col-2 d-flex justify-content-center">
+                        <i id="upcomingTaskSymbol" class="far fa-check-circle fa-3x" style="opacity:0.5"></i>
+                    </div>
+                    <div class="col-9 container pl-0">
+                        <h5 class="my-0"><b>Gửi cv2</b></h5>
+                        <small><strong>Giao cho: </strong> Hong Le Viet</small>
+                        <i class="fas fa-clock ml-2"></i>
+                        <small><strong>Đến ngày: </strong>Thứ tư&nbsp;</small>
+                        <a class="mr-10" href="#">Xem người ứng cử</a>
+                    </div>
+                    <div class="col-1">
+                        <div class="dropleft">
+                            <button class="btn" style="background:#E9ECEF" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Chỉnh sửa</a>
+                                <a class="dropdown-item" href="#">Xóa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- Content -->
+                <div class="container">
+                    <h6>Công việc</h6>
+                    <div class="row">
+                        <div class="col-1 d-flex align-items-center">
+                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
+                        </div>
+                        <div class="col-10 container px-0">
+                            <h7 class="my-0"><b>Hong Le Viet </b><small>tạo công việc</small></h7>
+                            <br>
+                            <small>22h trước</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Upcoming task 2 -->
+            <div id="upcomingTask2" class="container border py-3 text-secondary rounded"
+                style="height: 100%; display: none">
+                <!-- Header -->
+                <div class="row my-0 d-flex align-items-center">
+                    <div class="col-2 d-flex justify-content-center">
+                        <i id="upcomingTaskSymbol" class="far fa-check-circle fa-3x" style="opacity:0.5"></i>
+                    </div>
+                    <div class="col-9 container pl-0">
+                        <h5 class="my-0"><b>gửi JD</b></h5>
+                        <small><strong>Giao cho: </strong> Hong Le Viet</small>
+                        <i class="fas fa-clock ml-2"></i>
+                        <small><strong>Đến ngày: </strong>Thứ năm&nbsp;</small>
+                    </div>
+                    <div class="col-1">
+                        <div class="dropleft">
+                            <button class="btn" style="background:#E9ECEF" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Chỉnh sửa</a>
+                                <a class="dropdown-item" href="#">Xóa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- Content -->
+                <div class="container">
+                    <h6>Công việc</h6>
+                    <div class="row">
+                        <div class="col-1 d-flex align-items-center">
+                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
+                        </div>
+                        <div class="col-10 container px-0">
+                            <h7 class="my-0"><b>Hong Le Viet </b><small>tạo công việc</small></h7>
+                            <br>
+                            <small>24h trước</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Completed task 1 -->
+            <div id="completedTask1" class="container border py-3 text-secondary rounded"
+                style="height: 100%; display: none">
+                <!-- Header -->
+                <div class="row my-0 d-flex align-items-center">
+                    <div class="col-2 d-flex justify-content-center">
+                        <i id="completedTaskSymbol" class="far fa-check-circle fa-3x" style="opacity:0.5"></i>
+                    </div>
+                    <div class="col-9 container pl-0">
+                        <h5 class="my-0"><b>Scorecard: Hong</b></h5>
+                        <small><strong>Giao cho: </strong> Hong Le Viet</small>
+                        <i class="fas fa-clock ml-2"></i>
+                        <small><strong>Đến ngày: </strong>Thứ năm&nbsp;</small>
+                        <a class="mr-10" href="#">Xem người ứng cử</a>
+                    </div>
+                    <div class="col-1">
+                        <div class="dropleft">
+                            <button class="btn" style="background:#E9ECEF" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Chỉnh sửa</a>
+                                <a class="dropdown-item" href="#">Xóa</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- Content -->
+                <!-- Detail -->
+                <div class="container">
+                    <h6>Chi tiết</h6>
+                    <small>Nộp 1 bảng điểm cho Hong lên Dev</small>
+                </div>
+                <hr>
+                <!-- Activity -->
+                <div class="container">
+                    <h6>Công việc</h6>
+                    <div class="row">
+                        <div class="col-1 d-flex align-items-center">
+                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
+                        </div>
+                        <div class="col-10 container px-0">
+                            <h7 class="my-0"><b>Hong Le Viet </b><small>đánh dấu đã hoàn thành</small></h7>
+                            <br>
+                            <small>24h trước</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <h6>Công việc</h6>
+                    <div class="row">
+                        <div class="col-1 d-flex align-items-center">
+                            <i class="fas fa-hospital-symbol fa-2x text-success"></i>
+                        </div>
+                        <div class="col-10 container px-0">
+                            <h7 class="my-0"><b>Hong Le Viet </b><small>tạo công việc</small></h7>
+                            <br>
+                            <small>24h trước</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function upcomingTask() {
+        let x = document.getElementById("upcomingTask");
+        let y = document.getElementById("completedTask");
+        x.style.display = "block";
+        x.style.height = "100%";
+        y.style.display = "none";
+        showUpcomingTask1();
+    }
+    function completedTask() {
+        let x = document.getElementById("upcomingTask");
+        let y = document.getElementById("completedTask");
+        y.style.display = "block";
+        y.style.height = "100%";
+        x.style.display = "none";
+        showcompletedTask1();
+    }
+    function allTask() {
+        let x = document.getElementById("upcomingTask");
+        let y = document.getElementById("completedTask");
+        x.style.display = "block";
+        x.style.height = "50%";
+        y.style.height = "50%";
+        y.style.display = "block";
+        showUpcomingTask1();
+    }
+    function showUpcomingTask1() {
+        let x = document.getElementById("upcomingTask1");
+        let y = document.getElementById("upcomingTask2");
+        let z = document.getElementById("completedTask1");
+        x.style.display = "block";
+        y.style.display = "none";
+        z.style.display = "none";
+    }
+    function showUpcomingTask2() {
+        let x = document.getElementById("upcomingTask1");
+        let y = document.getElementById("upcomingTask2");
+        let z = document.getElementById("completedTask1");
+        y.style.display = "block";
+        x.style.display = "none";
+        z.style.display = "none";
+    }
+    function showcompletedTask1() {
+        let x = document.getElementById("upcomingTask1");
+        let y = document.getElementById("upcomingTask2");
+        let z = document.getElementById("completedTask1");
+        z.style.display = "block";
+        y.style.display = "none";
+        x.style.display = "none";
+    }
+</script>

@@ -1,0 +1,257 @@
+---
+layout: default
+permalink: /report/
+---
+
+<header class="py-3 my-0 mx-0 border container" style="background:#FCFBF7; min-width: 100%;">
+    <h3>Báo cáo / Phân tích</h3>
+</header>
+<div class="container pl-0" style="height: 75%">
+    <div class="row" style="height: 100%">
+        <div class="col-3 pt-3">
+            <!-- Filter -->
+            <div class="container">
+                <select class="form-control py-0 mx-2 border-0 fa text-secondary"
+                    style="width: 200px; height: 30px;background: #E9ECEF"
+                    onmousedown="if(this.options.length>8){this.size=8;this.style.height = 'auto';}"
+                    onchange="this.size=0;this.style.height = '30px';" onblur="this.size=0;">
+                    <optgroup>
+                        <option class="italicFont py-3" disabled>Hệ thống</option>
+                    </optgroup>
+                    <option>Tất cả vị trí trong công ty</option>
+                    <option>Tất cả vị trí của tôi</option>
+                    <option>Tất cả vị trí công khai của tôi</option>
+                    <optgroup>
+                        <option class="italicFont" disabled>Vị trí</option>
+                    </optgroup>
+                    <option>Lập trình viên</option>
+                </select>
+            </div>
+            <div class="container">
+                <select class="form-control py-0 my-2 mx-2 border-0 fa text-secondary"
+                    style="width: 200px; height:30px ;background: #E9ECEF">
+                    <option>&#xf017;&nbsp;&nbsp;&nbsp;7 ngày gần đây</option>
+                    <option>&#xf017;&nbsp;&nbsp;&nbsp;14 ngày gần đây</option>
+                    <option>&#xf017;&nbsp;&nbsp;&nbsp;Tháng này</option>
+                    <option>&#xf017;&nbsp;&nbsp;&nbsp;Tháng trước</option>
+                    <option>&#xf017;&nbsp;&nbsp;&nbsp;30 ngày gần đây</option>
+                    <option>&#xf017;&nbsp;&nbsp;&nbsp;90 ngày gần đây</option>
+                    <option>&#xf017;&nbsp;&nbsp;&nbsp;180 ngày gần đây</option>
+                    <option>&#xf017;&nbsp;&nbsp;&nbsp;Tự chọn</option>
+                </select>
+            </div>
+            <!-- Report types -->
+            <div class="container pt-3">
+                <h5 class="mx-2">Các loại báo cáo</h5>
+                <div class="container px-2">
+                    <div class="list-group">
+                        <a href="#"
+                            class="list-group-item list-group-item-action py-1 border-top-0 border-right-0 border-left-0"
+                            onclick="report01()">
+                            <small>Tổng quan</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action py-1 border-right-0 border-left-0"
+                            onclick="report02()">
+                            <small>Những người đã đăng ký</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action py-1 border-right-0 border-left-0"
+                            onclick="report03()">
+                            <small>Sourced Candidates Report </small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action py-1 border-right-0 border-left-0"
+                            onclick="report04()">
+                            <small>Referred Candidates Report </small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action py-1 border-right-0 border-left-0"
+                            onclick="report05()">
+                            <small>Recruited Candidates Report </small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action py-1 border-right-0 border-left-0"
+                            onclick="report06()">
+                            <small>Pipeline Performance Report</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action py-1 border-right-0 border-left-0"
+                            onclick="report07()">
+                            <small>Time to Fill Report</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action py-1 border-right-0 border-left-0"
+                            onclick="report08()">
+                            <small>Tin hắn</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action py-1 border-right-0 border-left-0"
+                            onclick="report09()">
+                            <small>Bảng câu hỏi</small>
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action py-1 border-bottom-0 border-right-0 border-left-0"
+                            onclick="report10()">
+                            <small>Vị trí trống</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="reportTypes" class="col-9 pt-3 pl-0" style="max-height: 85vh; overflow: auto">
+            {% include report01.html %}
+            {% include report02.html %}
+            {% include report03.html %}
+            {% include report04.html %}
+            {% include report05.html %}
+            {% include report06.html %}
+            {% include report07.html %}
+            {% include report08.html %}
+            {% include report09.html %}
+            {% include report10.html %}
+        </div>
+    </div>
+</div>
+<style>
+    .italicFont {
+        font-style: italic;
+        font-size: 13px;
+        padding-bottom: 10px !important;
+        height: 30px;
+    }
+
+    .legend {
+        list-style: none;
+    }
+
+    .legend li {
+        float: left;
+        margin-right: 10px;
+    }
+</style>
+<script>
+    let a = document.getElementById("reportNo01");
+    let b = document.getElementById("reportNo02");
+    let c = document.getElementById("reportNo03");
+    let d = document.getElementById("reportNo04");
+    let e = document.getElementById("reportNo05");
+    let f = document.getElementById("reportNo06");
+    let g = document.getElementById("reportNo07");
+    let h = document.getElementById("reportNo08");
+    let i = document.getElementById("reportNo09");
+    let j = document.getElementById("reportNo10");
+
+    function report01() {
+        a.style.display = "block";
+        b.style.display = "none";
+        c.style.display = "none";
+        d.style.display = "none";
+        e.style.display = "none";
+        f.style.display = "none";
+        g.style.display = "none";
+        h.style.display = "none";
+        i.style.display = "none";
+        j.style.display = "none";
+    }
+    function report02() {
+        a.style.display = "none";
+        b.style.display = "block";
+        c.style.display = "none";
+        d.style.display = "none";
+        e.style.display = "none";
+        f.style.display = "none";
+        g.style.display = "none";
+        h.style.display = "none";
+        i.style.display = "none";
+        j.style.display = "none";
+    }
+    function report03() {
+        a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "block";
+        d.style.display = "none";
+        e.style.display = "none";
+        f.style.display = "none";
+        g.style.display = "none";
+        h.style.display = "none";
+        i.style.display = "none";
+        j.style.display = "none";
+    }
+    function report04() {
+        a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
+        d.style.display = "block";
+        e.style.display = "none";
+        f.style.display = "none";
+        g.style.display = "none";
+        h.style.display = "none";
+        i.style.display = "none";
+        j.style.display = "none";
+    }
+    function report05() {
+        a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
+        d.style.display = "none";
+        e.style.display = "block";
+        f.style.display = "none";
+        g.style.display = "none";
+        h.style.display = "none";
+        i.style.display = "none";
+        j.style.display = "none";
+    }
+    function report06() {
+        a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
+        d.style.display = "none";
+        e.style.display = "none";
+        f.style.display = "block";
+        g.style.display = "none";
+        h.style.display = "none";
+        i.style.display = "none";
+        j.style.display = "none";
+    }
+    function report07() {
+        a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
+        d.style.display = "none";
+        e.style.display = "none";
+        f.style.display = "none";
+        g.style.display = "block";
+        h.style.display = "none";
+        i.style.display = "none";
+        j.style.display = "none";
+    }
+    function report08() {
+        a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
+        d.style.display = "none";
+        e.style.display = "none";
+        f.style.display = "none";
+        g.style.display = "none";
+        h.style.display = "block";
+        i.style.display = "none";
+        j.style.display = "none";
+    }
+    function report09() {
+        a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
+        d.style.display = "none";
+        e.style.display = "none";
+        f.style.display = "none";
+        g.style.display = "none";
+        h.style.display = "none";
+        i.style.display = "block";
+        j.style.display = "none";
+    }
+    function report10() {
+        a.style.display = "none";
+        b.style.display = "none";
+        c.style.display = "none";
+        d.style.display = "none";
+        e.style.display = "none";
+        f.style.display = "none";
+        g.style.display = "none";
+        h.style.display = "none";
+        i.style.display = "none";
+        j.style.display = "block";
+    }
+</script>

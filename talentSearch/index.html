@@ -1,0 +1,185 @@
+---
+layout: default
+permalink: /talentSearch/
+---
+
+<div id="talentSearchContainer" class="container mr-10">
+    <div class="container px-100">
+        <div class="title">
+            <span><i class="fa fa-search" aria-hidden="true"></i>&nbsp;Talent Search</span>
+            <p>Bạn có thể ngay lập tức truy cập hơn 2 tỷ hồ sơ liên tục được cập nhật, thật dẽ
+                dàng và nhanh chóng để tìm đúng người đúng việc</p>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="searchBox" id="searchBox" aria-describedby="helpId"
+                        placeholder="Tìm kiếm theo công việc, từ khóa hay các biến số">
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="padding-bottom: 50px">
+            <div class="col-3" style="padding-right: 0">
+                <div class="dropdown open">
+                    <button id="dropdownBtn" class="btn btn-gray dropdown-toggle" type="button" id="triggerIdLocation"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Địa điểm
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="triggerIdLocation">
+                        <button class="dropdown-item" href="#">Ho Chi Minh</button>
+                        <button class="dropdown-item" href="#">Ha Noi</button>
+                        <button class="dropdown-item" href="#">Da Nang</button>
+                        <button class="dropdown-item" href="#">Can Tho</button>
+                        <button class="dropdown-item" href="#">Nha trang</button>
+                        <button class="dropdown-item" href="#">Binh Duong</button>
+                        <button class="dropdown-item" href="#">Long An</button>
+                        <button class="dropdown-item" href="#">Vung Tau</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3" style="padding-right: 0">
+                <div class="dropdown">
+                    <button id="dropdownBtn" class="btn btn-gray dropdown-toggle" type="button" id="triggerIdCompany"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Công ty
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="triggerIdCompany">
+                        <button class="dropdown-item" href="#">ABC Group</button>
+                        <button class="dropdown-item" href="#">Google Co.LTD</button>
+                        <button class="dropdown-item" href="#">Facebook Company</button>
+                        <button class="dropdown-item" href="#">Breazy HCMC</button>
+                        <button class="dropdown-item" href="#">HCMUS Edu</button>
+                        <button class="dropdown-item" href="#">Cty TNHH MTV HH</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" style="padding-right: 0">
+                <div class="dropdown open">
+                    <button id="dropdownBtn" class="btn btn-gray dropdown-toggle" type="button" id="triggerIdSchool"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Trường
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="triggerIdSchool">
+                        <button class="dropdown-item" href="#">KHTN HCMC</button>
+                        <button class="dropdown-item" href="#">Back Khoa HCM</button>
+                        <button class="dropdown-item" href="#">DH Hong Bang</button>
+                        <button class="dropdown-item" href="#">DH Ton Duc Thang</button>
+                        <button class="dropdown-item" href="#">DH Su Pham</button>
+                        <button class="dropdown-item" href="#">DH Y Duoc</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <button id="searchBtn" type="button" class="btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>&nbsp;Tìm kiếm
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="info-area">
+                    <h4>Tìm kiếm tài năng là gì?</h4>
+                    <p>Đây là một công cụ tìm kiếm tài năng. Bạn chỉ cần cho biết kĩ năng và nền tảng bạn đang cần
+                        và Tìm kiếm tài năng sẽ tìm cho bạn</p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="info-area">
+                    <h4>Ví dụ:</h4>
+                    <ul class="tips">
+                        <li class="tip"><span>"Google" HOẶC "Apple"</span></li>
+                        <li class="tip"><span>("Google" HOẶC "Apple") VÀ "Marketing"</span></li>
+                        <li class="tip"><span>("Java" VÀ "C#") VÀ ("Google" HOẶC "Microsoft")</span></li>
+                    </ul>
+                    <p> <a class="learn-more" href="https://resources.breezy.hr/docs/boolean-search" target="_blank">
+                            Hiểu thêm về tìm kiếm theo biến số</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var btns = $("div[aria-labelledby='triggerIdLocation'] button");
+
+        $.each(btns, function (indexInArray, btn) {
+            $(btn).click(function () {
+                $("button#triggerIdLocation").text($(btn).text());
+            });
+        });
+
+        btns = $("div[aria-labelledby='triggerIdSchool'] button");
+
+        $.each(btns, function (indexInArray, btn) {
+            $(btn).click(function () {
+                $("button#triggerIdSchool").text($(btn).text());
+            });
+        });
+        var btns = $("div[aria-labelledby='triggerIdCompany'] button");
+
+        $.each(btns, function (indexInArray, btn) {
+            $(btn).click(function () {
+                $("button#triggerIdCompany").text($(btn).text());
+            });
+        });
+    });
+
+</script>
+
+<style>
+    #talentSearchContainer {
+        border: 1px solid #dedede;
+        background-color: #f9fafa;
+        border-radius: 4px;
+        padding: 20px;
+        margin: 20px;
+        height: calc(100% - 40px);
+        text-align: center;
+        width: 95%
+    }
+
+    #dropdownBtn {
+        width: 100%;
+        text-align: left;
+        position: relative;
+    }
+
+    #dropdownBtn::after {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+    }
+
+    #searchBtn {
+        color: white;
+        background: #5ac0e5;
+        width: 100%;
+    }
+
+    .title {
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+
+    .title span {
+        font-size: 32px;
+    }
+
+    .title p {
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 200;
+    }
+
+    .info-area {
+        height: 200px;
+        width: 100%;
+        text-align: left;
+    }
+</style>

@@ -1,0 +1,93 @@
+[33mcommit a587bdcec1bf7b3a82e2f6695d983136a041493f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: b26ae49 7a6d691
+Author: zZz <dinhhongoc@gmail.com>
+Date:   Sun Apr 14 14:46:54 2019 +0700
+
+    Merge pull request #1 from beohoang98/master
+    
+    Thêm css gốc của breezy, sửa 1 số style và dropdown
+
+[33mcommit 7a6d6914151b955b5b02462f4ee8bb3e12246f10[m
+Author: beohoang98 <beohoang98@users.noreply.github.com>
+Date:   Sun Apr 14 14:14:34 2019 +0700
+
+    add origin style of Breezy, fix some layout style
+
+[33mcommit 17a04c81416c3b13d500bfd145555770f91419f6[m
+Merge: 1d7eaa3 b26ae49
+Author: beohoang98 <beohoang98@users.noreply.github.com>
+Date:   Sun Apr 14 10:00:50 2019 +0700
+
+    merge upstream
+
+[33mcommit b26ae492ef4d034e2b9e537f5398038ebc7eb3a2[m
+Author: WzZzW <dinhhongoc@gmail.com>
+Date:   Sat Apr 13 13:12:23 2019 +0700
+
+    inbox_page_001
+
+[33mcommit 4ad421a1d692fe6932426ddcc39ab135b9f646b5[m
+Author: WzZzW <dinhhongoc@gmail.com>
+Date:   Fri Apr 12 10:01:02 2019 +0700
+
+    sidebar_complete_002
+
+[33mcommit 1d7eaa325ae7183a257e71c610ac2c7757edb9e1[m
+Author: beohoang98 <beohoang98@users.noreply.github.com>
+Date:   Fri Apr 12 09:28:04 2019 +0700
+
+    change bootstrap to 4.1.3, rearrange layout default
+
+[33mcommit a42d28b88d75f9ab0e108196474a3be93c857ebe[m
+Author: WzZzW <dinhhongoc@gmail.com>
+Date:   Fri Apr 12 09:19:56 2019 +0700
+
+    sidebar_complete_001
+
+[33mcommit 30b7b85646bf946add96eb5577629826e1604c24[m
+Author: beohoang98 <beohoang98@users.noreply.github.com>
+Date:   Fri Apr 12 09:09:37 2019 +0700
+
+    update .gitignore
+
+[33mcommit d4123d1fc23a9bb7eb64be24a06a76bacda152f4[m
+Author: beohoang98 <beohoang98@users.noreply.github.com>
+Date:   Fri Apr 12 09:08:45 2019 +0700
+
+    ignore build file
+
+[33mcommit 9be7ac686f87a25c2cb8dd1644bbc9878d67f0c1[m
+Author: WzZzW <dinhhongoc@gmail.com>
+Date:   Fri Apr 12 05:18:41 2019 +0700
+
+    home_layout_004
+
+[33mcommit 08117871aa88b5bc91b7a5014ae3a2ce35713305[m
+Author: WzZzW <dinhhongoc@gmail.com>
+Date:   Fri Apr 12 02:25:03 2019 +0700
+
+    home_layout_003
+
+[33mcommit 577c3709a5ec562790470c4b435a07f76846f8e4[m
+Author: WzZzW <dinhhongoc@gmail.com>
+Date:   Fri Apr 12 02:20:26 2019 +0700
+
+    home_layout_002
+
+[33mcommit 39fb8d2fa063a7712da9799b72a2de8cf3eccfc1[m
+Author: WzZzW <dinhhongoc@gmail.com>
+Date:   Thu Apr 11 22:16:43 2019 +0700
+
+    home_layout_001
+
+[33mcommit af0d9093c2ba4e61ad06dcecb4382533e78c436c[m
+Author: WzZzW <dinhhongoc@gmail.com>
+Date:   Wed Apr 10 22:27:40 2019 +0700
+
+    Initialize project
+
+[33mcommit 37d9fdf40d9f5578b492a14d974217056bed795e[m
+Author: zZz <dinhhongoc@gmail.com>
+Date:   Wed Apr 10 22:15:53 2019 +0700
+
+    Initial commit

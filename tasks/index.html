@@ -30,21 +30,23 @@ permalink: /tasks/
                 </a>
             </div>
         </div>
-        <button class="btn btn-primary mx-2" href="#" style="height: 35px">
+        <button class="btn btn-primary mx-2" style="height: 35px" data-toggle="modal" data-target="#taskModal">
             <i class="fa fa-plus"></i>
         </button>
+        {% include createTask.html %}
     </div>
 </header>
 <!-- Task content -->
 <div class="container" style="height: 75%">
     <div class="row" style="height: 100%">
+        <!-- Left border -->
         <div class="col-4">
             <div id="upcomingTask" style="background:#FCFBF7; height: 100%" class="container border rounded py-3 px-0"
                 style="overflow-y: auto; height: 100%">
                 <h5 class="px-3">Công việc sắp tới</h5>
-                <a href="#" onclick="showUpcomingTask1()">
-                    <div class="container py-3 text-secondary border-top" onclick="toDevPage()"
-                        style="background: #ffffff;">
+                <a id="upcomingTaskMenu1" href="#" onclick="showUpcomingTask1()">
+                    <div class="container py-3 text-secondary border-top""
+                        style=" background: #ffffff;">
                         <div class="row">
                             <div class="col-2 d-flex align-items-center">
                                 <i id="upcomingTaskSymbol" class="far fa-check-circle fa-2x" style="opacity:0.5"></i>
@@ -59,41 +61,46 @@ permalink: /tasks/
                         </div>
                     </div>
                 </a>
-                <div class="container py-3 text-secondary border-top border-bottom" onclick="toDevPage()"
-                    style="background: #ffffff;">
-                    <div class="row">
-                        <div class="col-2 d-flex align-items-center">
-                            <i id="upcomingTaskSymbol" class="far fa-check-circle fa-2x" style="opacity:0.5"></i>
-                        </div>
-                        <div class="col-10 container">
-                            <h6 class="my-0"><b>gửi JD</b></h6>
-                            <i class="fas fa-clock"></i>
-                            <small>Due Thursday</small>
-                            <i class="fas fa-user"></i>
-                            <small>You</small>
+                <a id="upcomingTaskMenu2" href="#" onclick="showUpcomingTask2()">
+                    <div class="container py-3 text-secondary border-top border-bottom""
+                    style=" background: #ffffff;">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <i id="upcomingTaskSymbol" class="far fa-check-circle fa-2x" style="opacity:0.5"></i>
+                            </div>
+                            <div class="col-10 container">
+                                <h6 class="my-0"><b>gửi JD</b></h6>
+                                <i class="fas fa-clock"></i>
+                                <small>Due Thursday</small>
+                                <i class="fas fa-user"></i>
+                                <small>You</small>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div id="completedTask" class="container border rounded py-3 px-0"
-                style="overflow-y: auto; height: 100%; display: none">
+                style="background:#FCFBF7; overflow-y: auto; height: 100%; display: none">
                 <h5 class="px-3">Công việc đã hoàn thành</h5>
-                <div class="container py-3 text-secondary" onclick="toDevPage()" style="background: #ffffff;">
-                    <div class="row">
-                        <div class="col-2 d-flex align-items-center">
-                            <i id="completedTaskSymbol" class="far fa-check-circle fa-2x" style="opacity:0.5"></i>
-                        </div>
-                        <div class="col-10 container">
-                            <h6 class="my-0"><b>Scoredcard: Hong</b></h6>
-                            <i class="fas fa-clock"></i>
-                            <small>Due Wednesday</small>
-                            <i class="fas fa-user"></i>
-                            <small>You</small>
+                <a id="completedTaskMenu1" href="#" onclick="showcompletedTask1()">
+                    <div class="container py-3 text-secondary border-top border-bottom" style="background: #ffffff;">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center">
+                                <i id="completedTaskSymbol" class="far fa-check-circle fa-2x" style="opacity:0.5"></i>
+                            </div>
+                            <div class="col-10 container">
+                                <h6 class="my-0"><b>Scoredcard: Hong</b></h6>
+                                <i class="fas fa-clock"></i>
+                                <small>Due Wednesday</small>
+                                <i class="fas fa-user"></i>
+                                <small>You</small>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
+        <!-- Right border -->
         <div class="col-8 pl-0 pr-5" style="background:#FCFBF7">
             <!-- Upcoming task 1 -->
             <div id="upcomingTask1" class="container border py-3 text-secondary rounded" style="height: 100%">
@@ -255,6 +262,7 @@ permalink: /tasks/
         x.style.display = "block";
         x.style.height = "100%";
         y.style.display = "none";
+        showUpcomingTask1();
     }
     function completedTask() {
         let x = document.getElementById("upcomingTask");
@@ -262,6 +270,7 @@ permalink: /tasks/
         y.style.display = "block";
         y.style.height = "100%";
         x.style.display = "none";
+        showcompletedTask1();
     }
     function allTask() {
         let x = document.getElementById("upcomingTask");
@@ -270,5 +279,30 @@ permalink: /tasks/
         x.style.height = "50%";
         y.style.height = "50%";
         y.style.display = "block";
+        showUpcomingTask1();
+    }
+    function showUpcomingTask1() {
+        let x = document.getElementById("upcomingTask1");
+        let y = document.getElementById("upcomingTask2");
+        let z = document.getElementById("completedTask1");
+        x.style.display = "block";
+        y.style.display = "none";
+        z.style.display = "none";
+    }
+    function showUpcomingTask2() {
+        let x = document.getElementById("upcomingTask1");
+        let y = document.getElementById("upcomingTask2");
+        let z = document.getElementById("completedTask1");
+        y.style.display = "block";
+        x.style.display = "none";
+        z.style.display = "none";
+    }
+    function showcompletedTask1() {
+        let x = document.getElementById("upcomingTask1");
+        let y = document.getElementById("upcomingTask2");
+        let z = document.getElementById("completedTask1");
+        z.style.display = "block";
+        y.style.display = "none";
+        x.style.display = "none";
     }
 </script>
