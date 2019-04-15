@@ -34,19 +34,19 @@
                 </form>
             </li>
             <li class="nav-item">
-                <a id="sideBarMenu" class="nav-link pl-0 text-secondary" href="/">
+                <a id="sideBarMenu" class="nav-link pl-0 text-secondary" href="{{ '/' | relative_url }}">
                     <i class="fas fa-home">&nbsp;</i>
                     <h7>Trang chủ</h7>
                 </a>
             </li>
             <li class="nav-item">
-                <a id="sideBarMenu" class="nav-link pl-0 text-secondary" href="/inbox">
+                <a id="sideBarMenu" class="nav-link pl-0 text-secondary" href="{{ '/inbox' | relative_url }}">
                     <i class="fas fa-envelope">&nbsp;</i>
                     <h7>Hộp thoại</h7>
                 </a>
             </li>
             <li class="nav-item d-flex justify-content-between align-items-center">
-                <a id="sideBarMenu" class="nav-link d-flex align-items-center pl-0 text-secondary" href="/tasks">
+                <a id="sideBarMenu" class="nav-link d-flex align-items-center pl-0 text-secondary" href="{{ '/tasks' | relative_url }}">
                     <i class="fas fa-check-square">&nbsp;&nbsp;</i>
                     <h7>Công việc</h7>
                 </a>
@@ -57,25 +57,25 @@
                 {% include createTask.html %}
             </li>
             <li class="nav-item">
-                <a id="sideBarMenu" class="nav-link pl-0 text-secondary" href="/calendar">
+                <a id="sideBarMenu" class="nav-link pl-0 text-secondary" href="{{ '/calendar' | relative_url }}">
                     <i class="far fa-calendar-alt">&nbsp;&nbsp;</i>
                     <h7>Lịch</h7>
                 </a>
             </li>
             <li class="nav-item">
-                <a id="sideBarMenu" class="nav-link pl-0 text-secondary" href="/report">
+                <a id="sideBarMenu" class="nav-link pl-0 text-secondary" href="{{ '/report' | relative_url }}">
                     <i class="fas fa-chart-bar">&nbsp;</i>
                     <h7>Báo cáo</h7>
                 </a>
             </li>
             <li class="nav-item">
-                <a id="sideBarMenu" class="nav-link pl-0 text-secondary" href="/talentSearch">
+                <a id="sideBarMenu" class="nav-link pl-0 text-secondary" href="{{ '/talentSearch' | relative_url }}">
                     <i class="fas fa-search">&nbsp;</i>
                     <h7>Tìm kiếm tài năng</h7>
                 </a>
             </li>
             <li class="nav-item d-flex justify-content-between align-items-center">
-                <a id="sideBarMenu" class="nav-link d-flex align-items-center pl-0 text-secondary" href="/position">
+                <a id="sideBarMenu" class="nav-link d-flex align-items-center pl-0 text-secondary" href="{{ '/position' | relative_url }}">
                     <i class="fas fa-briefcase">&nbsp;&nbsp;</i>
                     <h7>Vị trí</h7>
                 </a>
@@ -86,7 +86,7 @@
                 {% include createTask.html %}
             </li>
             <li class="nav-item d-flex justify-content-between align-items-center">
-                <a id="sideBarMenu" class="nav-link d-flex align-items-center pl-0 text-secondary" href="/candidate">
+                <a id="sideBarMenu" class="nav-link d-flex align-items-center pl-0 text-secondary" href="{{ '/candidate' | relative_url }}">
                     <i class="fas fa-users">&nbsp;</i>
                     <h7>Ứng cử viên</h7>
                 </a>
