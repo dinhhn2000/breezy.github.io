@@ -1,4 +1,4 @@
 title: Hello
 description: abc
-# baseurl: /breezy.github.io
+baseurl: /breezy.github.io
 theme: minima
