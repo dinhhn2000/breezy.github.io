@@ -1,3 +1,87 @@
-<iframe
+<!-- <iframe
     src="https://calendar.google.com/calendar/htmlembed?src=addressbook%23contacts%40group.v.calendar.google.com&ctz=Indian%2FChristmas"
-    style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
+
+<style>
+    #calendar {
+        max-width: 700px;
+        margin: 0px auto;
+    }
+</style>
+<link href="{{ '/fullCalendar/core/4.0.2/main.min.css' | relative_url }}" rel="stylesheet">
+<link href="{{ '/fullCalendar/daygrid/4.0.1/main.min.css' | relative_url }}" rel="stylesheet">
+<link href="{{ '/fullCalendar/timegrid/4.0.1/main.min.css' | relative_url }}" rel="stylesheet">
+<script src="{{ '/fullCalendar/core/4.0.2/main.min.js' | relative_url }}"></script>
+<script src="{{ '/fullCalendar/interaction/4.0.2/main.min.js' | relative_url }}"></script>
+<script src="{{ '/fullCalendar/daygrid/4.0.1/main.min.js' | relative_url }}"></script>
+<script src="{{ '/fullCalendar/timegrid/4.0.1/main.min.js' | relative_url }}"></script>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            plugins: ['interaction', 'dayGrid', 'timeGrid'],
+            defaultView: 'dayGridMonth',
+            defaultDate: '2019-04-07',
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2019-04-01'
+                },
+                {
+                    title: 'Long Event',
+                    start: '2019-04-07',
+                    end: '2019-04-10'
+                },
+                {
+                    groupId: '999',
+                    title: 'Repeating Event',
+                    start: '2019-04-09T16:00:00'
+                },
+                {
+                    groupId: '999',
+                    title: 'Repeating Event',
+                    start: '2019-04-16T16:00:00'
+                },
+                {
+                    title: 'Conference',
+                    start: '2019-04-11',
+                    end: '2019-04-13'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2019-04-12T10:30:00',
+                    end: '2019-04-12T12:30:00'
+                },
+                {
+                    title: 'Lunch',
+                    start: '2019-04-12T12:00:00'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2019-04-12T14:30:00'
+                },
+                {
+                    title: 'Birthday Party',
+                    start: '2019-04-13T07:00:00'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2019-04-28'
+                }
+            ]
+        });
+
+        calendar.render();
+    });
+
+</script>
+
+<div id='calendar'></div>

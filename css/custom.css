@@ -3,7 +3,7 @@
 }
 
 .form-control::placeholder {
-    color: #c0c0c0;  
+    color: #c0c0c0 !important;
     opacity: 1;
 }
 
@@ -98,12 +98,16 @@ hr.style3 {
     text-decoration: none
 }
 
-html {
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
     overflow: hidden;
 }
 
 #sidebarSearchBar::placeholder {
-    color: #ffffff
+    color: #ffffff !important
 }
 
 .hamburger {
@@ -131,4 +135,19 @@ html {
 .hamburger:hover {
     color: #ffffff;
     text-decoration: none !important
+}
+
+#calendarFilter:before {
+    font-family: "Font Awesome 5 Free";
+    content: "&#xf007"
+}
+
+.btn-cyan {
+    background: #5ac0e5 !important;
+    color: #ffffff
+}
+
+.btn-cyan:hover {
+    background: #4cabcd !important;
+    color: #ffffff
 }

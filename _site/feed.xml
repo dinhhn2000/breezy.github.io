@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 <generator uri="http://jekyllrb.com" version="3.7.4">Jekyll</generator>
-<link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
-<link href="http://localhost:4000/" rel="alternate" type="text/html" />
-<updated>2019-04-15T18:56:14+07:00</updated>
-<id>http://localhost:4000/</id>
+<link href="http://localhost:4000/breezy.github.io/feed.xml" rel="self" type="application/atom+xml" />
+<link href="http://localhost:4000/breezy.github.io/" rel="alternate" type="text/html" />
+<updated>2019-04-16T17:00:50+07:00</updated>
+<id>http://localhost:4000/breezy.github.io/</id>
 <subtitle>abc</subtitle>
 </feed>

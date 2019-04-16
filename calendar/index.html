@@ -3,7 +3,7 @@ layout: default
 permalink: /calendar/
 ---
 
-<header class="py-3 my-0 mx-0 border container" style="background:#FCFBF7; min-width: 100%;">
+<header class="py-3 my-0 mx-0 border container" style="background:#F9FAFA; min-width: 100%;">
     <h3>Lịch</h3>
 </header>
 <div class="row">
@@ -12,12 +12,20 @@ permalink: /calendar/
             <h5>Các bộ lọc</h5>
         </div>
         <div class="container">
-            <select class="form-control py-0 my-2 border-0 fa text-secondary"
-                style="width: 200px; height:30px ;background: #E9ECEF">
-                <option>&#xf007;&nbsp;&nbsp;&nbsp;Tất cả sự kiện</option>
-                <option>&#xf007;&nbsp;&nbsp;&nbsp;Sự kiện của tôi</option>
-                <option>&#xf007;&nbsp;&nbsp;&nbsp;Không phải sự kiện của tôi</option>
-            </select>
+            <div class="calendarFilterSelect d-flex justify-content-start align-items-center">
+                <div id="userFilter" class="d-flex justify-content-start align-items-center"
+                    style="z-index: 2; position: absolute;">
+                    <i style="float:left" class="fas fa-user text-secondary"></i>
+                </div>
+                <div class="calendarFilterSelect d-flex justify-content-start align-items-center"
+                    style="z-index: 0; position: absolute;">
+                    <select class="form-control pl-10 py-0 my-2 border-0 text-secondary">
+                        <option>Sự kiện của tôi</option>
+                        <option>Không phải sự kiện của tôi</option>
+                        <option>Không phải sự kiện của tôi</option>
+                    </select>
+                </div>
+            </div>
             <form>
                 <div class="multiselect">
                     <div class="selectBox" onclick="showCheckboxes()">
@@ -75,6 +83,25 @@ permalink: /calendar/
     #checkboxes label:hover {
         background-color: #acacac;
         border-radius: 3px
+    }
+
+    .calendarFilterSelect select {
+        width: 200px;
+        height: 30px;
+        background: transparent;
+        padding-left: 30px
+    }
+
+    .calendarFilterSelect {
+        width: 200px;
+        height: 30px;
+        background: #E9ECEF;
+        position: relative;
+        border-radius: 3px;
+    }
+
+    #userFilter{
+        padding-left: 15px
     }
 </style>
 
